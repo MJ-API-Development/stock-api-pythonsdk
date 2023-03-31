@@ -42,7 +42,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import openapi_client
+import src.IntelligentStockMarketAPI
 ```
 
 ### Setuptools
@@ -56,7 +56,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import openapi_client
+import src.IntelligentStockMarketAPI
 ```
 
 ## Getting Started
@@ -67,22 +67,22 @@ Please follow the [installation procedure](#installation--usage) and then run th
 from __future__ import print_function
 
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with src.IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EodApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.EodApi(api_client)
     date = 'date_example' # str | 
 exchange_code = 'exchange_code_example' # str | 
 
