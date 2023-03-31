@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.api.exchanges_api import ExchangesApi  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.api.exchanges_api import ExchangesApi  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 
 class TestExchangesApi(unittest.TestCase):
     """ExchangesApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.exchanges_api.ExchangesApi()  # noqa: E501
+        self.api = src.IntelligentStockMarketAPI.api.exchanges_api.ExchangesApi()  # noqa: E501
 
     def tearDown(self):
         pass

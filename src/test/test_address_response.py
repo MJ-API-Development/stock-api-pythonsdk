@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.address_response import AddressResponse  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.address_response import AddressResponse  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestAddressResponse(unittest.TestCase):
     """AddressResponse unit test stubs"""
@@ -34,7 +34,7 @@ class TestAddressResponse(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.address_response.AddressResponse()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.address_response.AddressResponse()  # noqa: E501
         if include_optional :
             return AddressResponse(
                 message = '0', 

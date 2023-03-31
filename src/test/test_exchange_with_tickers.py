@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.exchange_with_tickers import ExchangeWithTickers  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.exchange_with_tickers import ExchangeWithTickers  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestExchangeWithTickers(unittest.TestCase):
     """ExchangeWithTickers unit test stubs"""
@@ -34,7 +34,7 @@ class TestExchangeWithTickers(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.exchange_with_tickers.ExchangeWithTickers()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.exchange_with_tickers.ExchangeWithTickers()  # noqa: E501
         if include_optional :
             return ExchangeWithTickers(
                 code = '0', 
@@ -43,7 +43,7 @@ class TestExchangeWithTickers(unittest.TestCase):
                 exchange_id = '0', 
                 name = '0', 
                 operating_mic = '0', 
-                tickers_list = openapi_client.models.ticker_exchange_code.TickerExchangeCode(
+                tickers_list = src.IntelligentStockMarketAPI.models.ticker_exchange_code.TickerExchangeCode(
                     stock_code = '0', 
                     stock_id = '0', )
             )

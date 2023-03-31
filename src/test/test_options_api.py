@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.api.options_api import OptionsApi  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.api.options_api import OptionsApi  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 
 class TestOptionsApi(unittest.TestCase):
     """OptionsApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.options_api.OptionsApi()  # noqa: E501
+        self.api = src.IntelligentStockMarketAPI.api.options_api.OptionsApi()  # noqa: E501
 
     def tearDown(self):
         pass

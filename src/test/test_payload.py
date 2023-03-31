@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.payload import Payload  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.payload import Payload  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestPayload(unittest.TestCase):
     """Payload unit test stubs"""
@@ -34,7 +34,7 @@ class TestPayload(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.payload.Payload()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.payload.Payload()  # noqa: E501
         if include_optional :
             return Payload(
                 followers_count = 56, 
@@ -44,7 +44,7 @@ class TestPayload(unittest.TestCase):
                 profile_image_url = '0', 
                 screen_name = '0', 
                 sentiments = [
-                    openapi_client.models.sentiment.Sentiment(
+                    src.IntelligentStockMarketAPI.models.sentiment.Sentiment(
                         created_at = '0', 
                         favourite_count = 56, 
                         retweet_count = 56, 

@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.news_response_list import NewsResponseList  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.news_response_list import NewsResponseList  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestNewsResponseList(unittest.TestCase):
     """NewsResponseList unit test stubs"""
@@ -34,19 +34,19 @@ class TestNewsResponseList(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.news_response_list.NewsResponseList()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.news_response_list.NewsResponseList()  # noqa: E501
         if include_optional :
             return NewsResponseList(
                 message = '0', 
                 payload = [
-                    openapi_client.models.news.News(
+                    src.IntelligentStockMarketAPI.models.news.News(
                         link = '0', 
                         provider_publish_time = 56, 
                         publisher = '0', 
-                        related_tickers = openapi_client.models.related_tickers.RelatedTickers(
+                        related_tickers = src.IntelligentStockMarketAPI.models.related_tickers.RelatedTickers(
                             ticker = '0', ), 
-                        thumbnail = openapi_client.models.thumbnail.Thumbnail(
-                            resolutions = openapi_client.models.resolution.Resolution(
+                        thumbnail = src.IntelligentStockMarketAPI.models.thumbnail.Thumbnail(
+                            resolutions = src.IntelligentStockMarketAPI.models.resolution.Resolution(
                                 height = 56, 
                                 tag = '0', 
                                 url = '0', 

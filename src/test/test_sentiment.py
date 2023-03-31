@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.sentiment import Sentiment  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.sentiment import Sentiment  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestSentiment(unittest.TestCase):
     """Sentiment unit test stubs"""
@@ -34,7 +34,7 @@ class TestSentiment(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.sentiment.Sentiment()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.sentiment.Sentiment()  # noqa: E501
         if include_optional :
             return Sentiment(
                 created_at = '0', 

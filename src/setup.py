@@ -13,7 +13,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "openapi-client"
+NAME = "Intelligent-Stock-Market-API"
 VERSION = "1.0.0"
 # To install the library, run the following
 #
@@ -27,7 +27,7 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="EOD STOCK API",
+    description="An Intelligent EOD Stock Market, Financial News & Financial Social Media Trends API",
     author="MJ API Development",
     author_email="support@eod-stock-api.site",
     url="https://eod-stock-api.site",

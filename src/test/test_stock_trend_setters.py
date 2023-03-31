@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.stock_trend_setters import StockTrendSetters  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.stock_trend_setters import StockTrendSetters  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestStockTrendSetters(unittest.TestCase):
     """StockTrendSetters unit test stubs"""
@@ -34,11 +34,11 @@ class TestStockTrendSetters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.stock_trend_setters.StockTrendSetters()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.stock_trend_setters.StockTrendSetters()  # noqa: E501
         if include_optional :
             return StockTrendSetters(
                 message = '0', 
-                payload = openapi_client.models.payload.Payload(
+                payload = src.IntelligentStockMarketAPI.models.payload.Payload(
                     followers_count = 56, 
                     friends_count = 56, 
                     location = '0', 
@@ -46,7 +46,7 @@ class TestStockTrendSetters(unittest.TestCase):
                     profile_image_url = '0', 
                     screen_name = '0', 
                     sentiments = [
-                        openapi_client.models.sentiment.Sentiment(
+                        src.IntelligentStockMarketAPI.models.sentiment.Sentiment(
                             created_at = '0', 
                             favourite_count = 56, 
                             retweet_count = 56, 

@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.stock_list_request import StockListRequest  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.stock_list_request import StockListRequest  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestStockListRequest(unittest.TestCase):
     """StockListRequest unit test stubs"""
@@ -34,10 +34,10 @@ class TestStockListRequest(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.stock_list_request.StockListRequest()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.stock_list_request.StockListRequest()  # noqa: E501
         if include_optional :
             return StockListRequest(
-                payload = openapi_client.models.stock1.Stock1(
+                payload = src.IntelligentStockMarketAPI.models.stock1.Stock1(
                     code = '0', 
                     currency = '0', 
                     exchange_code = '0', 

@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.api.eod_api import EodApi  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.api.eod_api import EodApi  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 
 class TestEodApi(unittest.TestCase):
     """EodApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.eod_api.EodApi()  # noqa: E501
+        self.api = src.IntelligentStockMarketAPI.api.eod_api.EodApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.news import News  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.news import News  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestNews(unittest.TestCase):
     """News unit test stubs"""
@@ -34,16 +34,16 @@ class TestNews(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.news.News()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.news.News()  # noqa: E501
         if include_optional :
             return News(
                 link = '0', 
                 provider_publish_time = 56, 
                 publisher = '0', 
-                related_tickers = openapi_client.models.related_tickers.RelatedTickers(
+                related_tickers = src.IntelligentStockMarketAPI.models.related_tickers.RelatedTickers(
                     ticker = '0', ), 
-                thumbnail = openapi_client.models.thumbnail.Thumbnail(
-                    resolutions = openapi_client.models.resolution.Resolution(
+                thumbnail = src.IntelligentStockMarketAPI.models.thumbnail.Thumbnail(
+                    resolutions = src.IntelligentStockMarketAPI.models.resolution.Resolution(
                         height = 56, 
                         tag = '0', 
                         url = '0', 

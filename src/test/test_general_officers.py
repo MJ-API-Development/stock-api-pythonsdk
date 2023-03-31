@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.general_officers import GeneralOfficers  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.general_officers import GeneralOfficers  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestGeneralOfficers(unittest.TestCase):
     """GeneralOfficers unit test stubs"""
@@ -34,7 +34,7 @@ class TestGeneralOfficers(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.general_officers.GeneralOfficers()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.general_officers.GeneralOfficers()  # noqa: E501
         if include_optional :
             return GeneralOfficers(
                 fundamental_id = '0', 

@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.thumbnail import Thumbnail  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.thumbnail import Thumbnail  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestThumbnail(unittest.TestCase):
     """Thumbnail unit test stubs"""
@@ -34,10 +34,10 @@ class TestThumbnail(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.thumbnail.Thumbnail()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.thumbnail.Thumbnail()  # noqa: E501
         if include_optional :
             return Thumbnail(
-                resolutions = openapi_client.models.resolution.Resolution(
+                resolutions = src.IntelligentStockMarketAPI.models.resolution.Resolution(
                     height = 56, 
                     tag = '0', 
                     url = '0', 

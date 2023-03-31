@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.resolution import Resolution  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.resolution import Resolution  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestResolution(unittest.TestCase):
     """Resolution unit test stubs"""
@@ -34,7 +34,7 @@ class TestResolution(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.resolution.Resolution()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.resolution.Resolution()  # noqa: E501
         if include_optional :
             return Resolution(
                 height = 56, 

@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.public_fundamental import PublicFundamental  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.public_fundamental import PublicFundamental  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestPublicFundamental(unittest.TestCase):
     """PublicFundamental unit test stubs"""
@@ -34,17 +34,17 @@ class TestPublicFundamental(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.public_fundamental.PublicFundamental()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.public_fundamental.PublicFundamental()  # noqa: E501
         if include_optional :
             return PublicFundamental(
-                address = openapi_client.models.general_address.GeneralAddress(
+                address = src.IntelligentStockMarketAPI.models.general_address.GeneralAddress(
                     city = '0', 
                     country = '0', 
                     fundamental_id = '0', 
                     state = '0', 
                     street = '0', 
                     zip = '0', ), 
-                analyst_rankings = openapi_client.models.analyst.Analyst(
+                analyst_rankings = src.IntelligentStockMarketAPI.models.analyst.Analyst(
                     buy = 56, 
                     fundamental_id = '0', 
                     hold = 56, 
@@ -53,9 +53,9 @@ class TestPublicFundamental(unittest.TestCase):
                     strong_buy = 56, 
                     strong_sell = 56, 
                     target_price = 1.337, ), 
-                balance_sheets = openapi_client.models.balance_sheets.BalanceSheets(
-                    annual_balance_sheets = openapi_client.models.annual_balance_sheet.AnnualBalanceSheet(
-                        balance_sheet = openapi_client.models._balance_sheet._BalanceSheet(
+                balance_sheets = src.IntelligentStockMarketAPI.models.balance_sheets.BalanceSheets(
+                    annual_balance_sheets = src.IntelligentStockMarketAPI.models.annual_balance_sheet.AnnualBalanceSheet(
+                        balance_sheet = src.IntelligentStockMarketAPI.models._balance_sheet._BalanceSheet(
                             accounts_payable = 1.337, 
                             accumulated_amortization = 1.337, 
                             accumulated_depreciation = 1.337, 
@@ -114,10 +114,10 @@ class TestPublicFundamental(unittest.TestCase):
                             treasury_stock = 1.337, 
                             warrants = 1.337, ), 
                         filing_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), ), 
-                    quarterly_balance_sheets = openapi_client.models.quarterly_balance_sheet.QuarterlyBalanceSheet(
+                    quarterly_balance_sheets = src.IntelligentStockMarketAPI.models.quarterly_balance_sheet.QuarterlyBalanceSheet(
                         filing_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), ), ), 
                 cik = '0', 
-                contact = openapi_client.models.general_contact.GeneralContact(
+                contact = src.IntelligentStockMarketAPI.models.general_contact.GeneralContact(
                     full_time_employees = 56, 
                     fundamental_id = '0', 
                     logo_url = '0', 
@@ -135,7 +135,7 @@ class TestPublicFundamental(unittest.TestCase):
                 gic_group = '0', 
                 gic_industry = '0', 
                 gic_sector = '0', 
-                highlights = openapi_client.models.highlights.Highlights(
+                highlights = src.IntelligentStockMarketAPI.models.highlights.Highlights(
                     book_value = 1.337, 
                     date_created = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                     diluted_eps_ttm = 1.337, 
@@ -169,20 +169,20 @@ class TestPublicFundamental(unittest.TestCase):
                 ipo_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                 is_delisted = True, 
                 isin = '0', 
-                listings = openapi_client.models.general_listings.GeneralListings(
+                listings = src.IntelligentStockMarketAPI.models.general_listings.GeneralListings(
                     exchange = '0', 
                     fundamental_id = '0', 
                     listing_id = '0', 
                     name = '0', 
                     stock_symbol = '0', ), 
                 name = '0', 
-                officers = openapi_client.models.general_officers.GeneralOfficers(
+                officers = src.IntelligentStockMarketAPI.models.general_officers.GeneralOfficers(
                     fundamental_id = '0', 
                     name = '0', 
                     title = '0', 
                     year_born = '0', ), 
                 sector = '0', 
-                share_stats = openapi_client.models.share_stats.ShareStats(
+                share_stats = src.IntelligentStockMarketAPI.models.share_stats.ShareStats(
                     date_created = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                     fundamental_id = '0', 
                     percent_insiders = 1.337, 
@@ -194,7 +194,7 @@ class TestPublicFundamental(unittest.TestCase):
                     short_percent_float = 1.337, 
                     short_percent_outstanding = 1.337, 
                     short_ratio = 1.337, ), 
-                split_dividends = openapi_client.models.split_dividends.SplitDividends(
+                split_dividends = src.IntelligentStockMarketAPI.models.split_dividends.SplitDividends(
                     date_created = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                     dividend_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                     ex_dividend_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
@@ -203,12 +203,12 @@ class TestPublicFundamental(unittest.TestCase):
                     fundamental_id = '0', 
                     last_split_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                     last_split_factor = '0', 
-                    number_of_dividends_by_year = openapi_client.models.number_dividends_by_year.NumberDividendsByYear(
+                    number_of_dividends_by_year = src.IntelligentStockMarketAPI.models.number_dividends_by_year.NumberDividendsByYear(
                         count = 56, 
                         year = 56, ), 
                     payout_ratio = 1.337, ), 
                 stock_symbol = '0', 
-                technicals = openapi_client.models.technicals.Technicals(
+                technicals = src.IntelligentStockMarketAPI.models.technicals.Technicals(
                     beta = 1.337, 
                     date_created = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                     fundamental_id = '0', 
@@ -221,7 +221,7 @@ class TestPublicFundamental(unittest.TestCase):
                     t_52_week_high = 1.337, 
                     t_52_week_low = 1.337, ), 
                 type = '0', 
-                valuation = openapi_client.models.valuations.Valuations(
+                valuation = src.IntelligentStockMarketAPI.models.valuations.Valuations(
                     date_created = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                     enterprise_value = 56, 
                     enterprise_value_ebitda = 1.337, 

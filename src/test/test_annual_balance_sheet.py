@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.annual_balance_sheet import AnnualBalanceSheet  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.annual_balance_sheet import AnnualBalanceSheet  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestAnnualBalanceSheet(unittest.TestCase):
     """AnnualBalanceSheet unit test stubs"""
@@ -34,10 +34,10 @@ class TestAnnualBalanceSheet(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.annual_balance_sheet.AnnualBalanceSheet()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.annual_balance_sheet.AnnualBalanceSheet()  # noqa: E501
         if include_optional :
             return AnnualBalanceSheet(
-                balance_sheet = openapi_client.models._balance_sheet._BalanceSheet(
+                balance_sheet = src.IntelligentStockMarketAPI.models._balance_sheet._BalanceSheet(
                     accounts_payable = 1.337, 
                     accumulated_amortization = 1.337, 
                     accumulated_depreciation = 1.337, 

@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.split_dividends import SplitDividends  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.split_dividends import SplitDividends  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestSplitDividends(unittest.TestCase):
     """SplitDividends unit test stubs"""
@@ -34,7 +34,7 @@ class TestSplitDividends(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.split_dividends.SplitDividends()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.split_dividends.SplitDividends()  # noqa: E501
         if include_optional :
             return SplitDividends(
                 date_created = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
@@ -45,7 +45,7 @@ class TestSplitDividends(unittest.TestCase):
                 fundamental_id = '0', 
                 last_split_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                 last_split_factor = '0', 
-                number_of_dividends_by_year = openapi_client.models.number_dividends_by_year.NumberDividendsByYear(
+                number_of_dividends_by_year = src.IntelligentStockMarketAPI.models.number_dividends_by_year.NumberDividendsByYear(
                     count = 56, 
                     year = 56, ), 
                 payout_ratio = 1.337

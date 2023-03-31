@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.balance_sheets import BalanceSheets  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.balance_sheets import BalanceSheets  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestBalanceSheets(unittest.TestCase):
     """BalanceSheets unit test stubs"""
@@ -34,11 +34,11 @@ class TestBalanceSheets(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.balance_sheets.BalanceSheets()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.balance_sheets.BalanceSheets()  # noqa: E501
         if include_optional :
             return BalanceSheets(
-                annual_balance_sheets = openapi_client.models.annual_balance_sheet.AnnualBalanceSheet(
-                    balance_sheet = openapi_client.models._balance_sheet._BalanceSheet(
+                annual_balance_sheets = src.IntelligentStockMarketAPI.models.annual_balance_sheet.AnnualBalanceSheet(
+                    balance_sheet = src.IntelligentStockMarketAPI.models._balance_sheet._BalanceSheet(
                         accounts_payable = 1.337, 
                         accumulated_amortization = 1.337, 
                         accumulated_depreciation = 1.337, 
@@ -97,8 +97,8 @@ class TestBalanceSheets(unittest.TestCase):
                         treasury_stock = 1.337, 
                         warrants = 1.337, ), 
                     filing_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), ), 
-                quarterly_balance_sheets = openapi_client.models.quarterly_balance_sheet.QuarterlyBalanceSheet(
-                    balance_sheet = openapi_client.models._balance_sheet._BalanceSheet(
+                quarterly_balance_sheets = src.IntelligentStockMarketAPI.models.quarterly_balance_sheet.QuarterlyBalanceSheet(
+                    balance_sheet = src.IntelligentStockMarketAPI.models._balance_sheet._BalanceSheet(
                         accounts_payable = 1.337, 
                         accumulated_amortization = 1.337, 
                         accumulated_depreciation = 1.337, 

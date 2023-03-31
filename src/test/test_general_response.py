@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.general_response import GeneralResponse  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.general_response import GeneralResponse  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestGeneralResponse(unittest.TestCase):
     """GeneralResponse unit test stubs"""
@@ -34,11 +34,11 @@ class TestGeneralResponse(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.general_response.GeneralResponse()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.general_response.GeneralResponse()  # noqa: E501
         if include_optional :
             return GeneralResponse(
                 message = '0', 
-                payload = openapi_client.models.general.General(
+                payload = src.IntelligentStockMarketAPI.models.general.General(
                     cik = '0', 
                     country_name = '0', 
                     currency = '0', 

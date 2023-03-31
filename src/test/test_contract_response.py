@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.contract_response import ContractResponse  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.contract_response import ContractResponse  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestContractResponse(unittest.TestCase):
     """ContractResponse unit test stubs"""
@@ -34,11 +34,11 @@ class TestContractResponse(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.contract_response.ContractResponse()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.contract_response.ContractResponse()  # noqa: E501
         if include_optional :
             return ContractResponse(
                 message = '0', 
-                payload = openapi_client.models.contracts.Contracts(
+                payload = src.IntelligentStockMarketAPI.models.contracts.Contracts(
                     ask = 1.337, 
                     bid = 1.337, 
                     call_put_id = '0', 

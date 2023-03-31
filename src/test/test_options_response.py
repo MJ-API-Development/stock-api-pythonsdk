@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.options_response import OptionsResponse  # noqa: E501
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.options_response import OptionsResponse  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 class TestOptionsResponse(unittest.TestCase):
     """OptionsResponse unit test stubs"""
@@ -34,11 +34,11 @@ class TestOptionsResponse(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.options_response.OptionsResponse()  # noqa: E501
+        # model = src.IntelligentStockMarketAPI.models.options_response.OptionsResponse()  # noqa: E501
         if include_optional :
             return OptionsResponse(
                 message = '0', 
-                payload = openapi_client.models.options.Options(
+                payload = src.IntelligentStockMarketAPI.models.options.Options(
                     currency = '0', 
                     exchange = '0', 
                     last_trade_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
