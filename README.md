@@ -29,7 +29,8 @@ Python 3.4+
 ## Installation & Usage
 ### pip install
 
-If the python package is hosted on a repository, you can install directly using:
+you can install directly from pypi - 
+find our package at [Intelligent-Stock-Market-API](https://pypi.org/project/Intelligent-Stock-Market-API)
 
 ```sh
     pip install Intelligent-Stock-Market-API
