@@ -32,16 +32,22 @@ Python 3.4+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/MJ-API-Development/stock-api-pythonsdk.git
+    pip install Intelligent-Stock-Market-API
+    
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/MJ-API-Development/stock-api-pythonsdk.git)
+you may need to run `pip` with root permission:
+```sh
+  sudo pip install Intelligent-Stock-Market-API
+```
+
 
 Then import the package:
 ```python
-import src.IntelligentStockMarketAPI
+import IntelligentStockMarketAPI
 ```
 
 ### Setuptools
+
 
 Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
@@ -52,12 +58,16 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import src.IntelligentStockMarketAPI
+import IntelligentStockMarketAPI
 ```
 
 ## Getting Started
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
+
+
+#### Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
+#### See configuration.py for a list of all supported configuration parameters.
 
 ```python
 from __future__ import print_function
@@ -67,16 +77,11 @@ import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
-# See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "https://gateway.eod-stock-api.site/api",
     apikey = "SECRET API KEY"
 )
-
-
-
-# Enter a context with an instance of the API client
+#### Enter a context with an instance of the API client
 with src.IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = src.IntelligentStockMarketAPI.EodApi(api_client)
@@ -209,11 +214,12 @@ All URIs are relative to *https://gateway.eod-stock-api.site/api*
 
 ## basicAuth
 
-- **Type**: HTTP basic authentication
+- **Type**: 
+  - apikey
 
 
 ## Author
-    **MJ API Development**
+- **MJ API Development**
 
     **support@eod-stock-api.site**
 

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py_intelligent_stock_market_api_YOUR_mobius-crypt"
+version = "0.0.2"
+authors = [
+  { name="AJ Ndou", email="justice@eod-stock-api.site" },
+]
+description="An Intelligent EOD Stock Market, Financial News & Financial Social Media Trends API"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://eod-stock-api.site"
+"Bug Tracker" = "https://github.com/MJ-API-Development/stock-api-pythonsdk/issues"
+"Gateway" = "https://gateway.eod-stock-api.site"
+
+[project.dependencies]
+certifi="14.05.14"
+six="1.10"
+python_dateutil="2.5.3"
+setuptools="21.0.0"
+urllib3="1.15.1"
