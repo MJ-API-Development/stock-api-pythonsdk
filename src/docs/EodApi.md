@@ -1,4 +1,4 @@
-# openapi_client.EodApi
+# src.IntelligentStockMarketAPI.EodApi
 
 All URIs are relative to *http://https://gateway.eod-stock-api.site/api*
 
@@ -22,20 +22,20 @@ will return end of day data for a certain stock at a given date
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EodApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.EodApi(api_client)
     date = 'date_example' # str | 
 exchange_code = 'exchange_code_example' # str | 
 
@@ -85,20 +85,20 @@ will return end of day data for a certain stock at a given date
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EodApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.EodApi(api_client)
     date = 'date_example' # str | 
 exchange_code = 'exchange_code_example' # str | 
 stock_code = 'stock_code_example' # str | 
@@ -150,20 +150,20 @@ return a list of eod historical data on exchange_code from one date to the other
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EodApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.EodApi(api_client)
     exchange_code = 'exchange_code_example' # str | 
 to = 'to_example' # str | 
 _from = '_from_example' # str | 
@@ -215,20 +215,20 @@ will return end of day data for a certain stock at a given date
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EodApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.EodApi(api_client)
     stock_code = 'stock_code_example' # str | 
 to = 'to_example' # str | 
 _from = '_from_example' # str | 

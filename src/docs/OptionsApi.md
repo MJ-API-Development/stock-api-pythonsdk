@@ -1,4 +1,4 @@
-# openapi_client.OptionsApi
+# src.IntelligentStockMarketAPI.OptionsApi
 
 All URIs are relative to *http://https://gateway.eod-stock-api.site/api*
 
@@ -20,20 +20,20 @@ given call_put_id return Contract
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OptionsApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.OptionsApi(api_client)
     call_put_id = 'call_put_id_example' # str | 
 
     try:
@@ -81,20 +81,20 @@ get Stock options data for the provided stock code
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OptionsApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.OptionsApi(api_client)
     stock_code = 'stock_code_example' # str | 
 
     try:

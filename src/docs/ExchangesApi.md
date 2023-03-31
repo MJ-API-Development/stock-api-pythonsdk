@@ -1,4 +1,4 @@
-# openapi_client.ExchangesApi
+# src.IntelligentStockMarketAPI.ExchangesApi
 
 All URIs are relative to *http://https://gateway.eod-stock-api.site/api*
 
@@ -25,20 +25,20 @@ given exchange_id or exchange_code code will return exchange_code data
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ExchangesApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.ExchangesApi(api_client)
     exchange_code = 'exchange_code_example' # str | 
 
     try:
@@ -86,20 +86,20 @@ Exchange Data with a total list of stock_codes and stock_id's
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ExchangesApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.ExchangesApi(api_client)
     exchange_code = 'exchange_code_example' # str | 
 
     try:
@@ -147,20 +147,20 @@ given exchange_id or exchange_code code will return exchange_code data
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ExchangesApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.ExchangesApi(api_client)
     exchange_id = 'exchange_id_example' # str | 
 
     try:
@@ -208,20 +208,20 @@ returns a list of listed companies in exchange_code
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ExchangesApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.ExchangesApi(api_client)
     exchange_code = 'exchange_code_example' # str | 
 
     try:
@@ -269,20 +269,20 @@ returns a list of listed stocks in exchange_code
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ExchangesApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.ExchangesApi(api_client)
     exchange_code = 'exchange_code_example' # str | 
 
     try:
@@ -330,21 +330,21 @@ given exchange_code data create new exchange_code
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ExchangesApi(api_client)
-    body = openapi_client.ExchangeRequest() # ExchangeRequest |  (optional)
+    api_instance = src.IntelligentStockMarketAPI.ExchangesApi(api_client)
+    body = src.IntelligentStockMarketAPI.ExchangeRequest() # ExchangeRequest |  (optional)
 
     try:
         api_response = api_instance.v1_exchange_post(body=body)
@@ -391,20 +391,20 @@ returns a list of exchanges
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ExchangesApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.ExchangesApi(api_client)
     
     try:
         api_response = api_instance.v1_exchanges_get()

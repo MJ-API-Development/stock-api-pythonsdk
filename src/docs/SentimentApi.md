@@ -1,4 +1,4 @@
-# openapi_client.SentimentApi
+# src.IntelligentStockMarketAPI.SentimentApi
 
 All URIs are relative to *http://https://gateway.eod-stock-api.site/api*
 
@@ -21,20 +21,20 @@ Given the stock_code return a list of trend setters for this stock and their sen
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SentimentApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.SentimentApi(api_client)
     stock_code = 'stock_code_example' # str | 
 
     try:
@@ -82,20 +82,20 @@ Will return a sentiment for most trending Tweets by stock
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SentimentApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.SentimentApi(api_client)
     stock_code = 'stock_code_example' # str | 
 
     try:
@@ -143,20 +143,20 @@ Will return a list Social Media Sentiments for a certain stock
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = src.IntelligentStockMarketAPI.Configuration(
     host = "http://https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SentimentApi(api_client)
+    api_instance = src.IntelligentStockMarketAPI.SentimentApi(api_client)
     stock_code = 'stock_code_example' # str | 
 
     try:
