@@ -19,7 +19,7 @@
     </p>
 
 - API version: v1
-- Package version: 1.0.0
+- Package version: 0.0.3
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 ## Requirements.
@@ -32,11 +32,14 @@ Python 3.4+
 you can install directly from pypi - 
 find our package at [Intelligent-Stock-Market-API](https://pypi.org/project/Intelligent-Stock-Market-API)
 
+On Windows
 ```sh
     pip install Intelligent-Stock-Market-API
     
 ```
-you may need to run `pip` with root permission:
+
+On Linux 
+    you may need to run `pip` with root permission:
 ```sh
   sudo pip install Intelligent-Stock-Market-API
 ```
@@ -52,9 +55,12 @@ import IntelligentStockMarketAPI
 
 Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
+On Windows
 ```sh
 python setup.py install --user
 ```
+
+On Linux
 (or `sudo python setup.py install` to install the package for all users)
 
 Then import the package:
@@ -74,27 +80,26 @@ Please follow the [installation procedure](#installation--usage) and then run th
 from __future__ import print_function
 
 import time
-import src.IntelligentStockMarketAPI
-from src.IntelligentStockMarketAPI.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 
-configuration = src.IntelligentStockMarketAPI.Configuration(
+configuration = IntelligentStockMarketAPI.Configuration(
     host = "https://gateway.eod-stock-api.site/api",
     apikey = "SECRET API KEY"
 )
-#### Enter a context with an instance of the API client
+# Enter a context with an instance of the API client
 with src.IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = src.IntelligentStockMarketAPI.EodApi(api_client)
-    date = 'date_example' # str | 
-exchange_code = 'exchange_code_example' # str | 
+    api_instance =IntelligentStockMarketAPI.EodApi(api_client)
+    date = '2022-02-02' # str | 
+    exchange_code = 'TO' # str | "Country"="Canada", "name": "Toronto Exchange", "operating_mic": "XTSE" 
 
     try:
         api_response = api_instance.v1_eod_date_exchange_code_get(date, exchange_code)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling EodApi->v1_eod_date_exchange_code_get: %s\n" % e)
-    
+        print("Exception when calling EodApi->v1_eod_date_exchange_code_get: %s\n" % e)    
 ```
 
 ## Documentation for API Endpoints
