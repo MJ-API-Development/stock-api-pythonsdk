@@ -1,13 +1,12 @@
 # src.IntelligentStockMarketAPI.SentimentApi
 
-All URIs are relative to *http://https://gateway.eod-stock-api.site/api*
+All URIs are relative to *https://gateway.eod-stock-api.site/api*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**v1_sentiment_trend_setters_stock_stock_code_get**](SentimentApi.md#v1_sentiment_trend_setters_stock_stock_code_get) | **GET** /v1/sentiment/trend-setters/stock/{stock_code} | 
-[**v1_sentiment_trending_stock_stock_code_get**](SentimentApi.md#v1_sentiment_trending_stock_stock_code_get) | **GET** /v1/sentiment/trending/stock/{stock_code} | 
-[**v1_sentiment_tweet_stock_stock_code_get**](SentimentApi.md#v1_sentiment_tweet_stock_stock_code_get) | **GET** /v1/sentiment/tweet/stock/{stock_code} | 
-
+| Method                                                                                                                 | HTTP request                                           | Description |
+|------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|-------------|
+| [**v1_sentiment_trend_setters_stock_stock_code_get**](SentimentApi.md#v1_sentiment_trend_setters_stock_stock_code_get) | **GET** /v1/sentiment/trend-setters/stock/{stock_code} |             |
+| [**v1_sentiment_trending_stock_stock_code_get**](SentimentApi.md#v1_sentiment_trending_stock_stock_code_get)           | **GET** /v1/sentiment/trending/stock/{stock_code}      |             |
+| [**v1_sentiment_tweet_stock_stock_code_get**](SentimentApi.md#v1_sentiment_tweet_stock_stock_code_get)                 | **GET** /v1/sentiment/tweet/stock/{stock_code}         |             |
 
 # **v1_sentiment_trend_setters_stock_stock_code_get**
 > StockTrendSetters v1_sentiment_trend_setters_stock_stock_code_get(stock_code)
@@ -24,10 +23,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -46,9 +45,9 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
 
 ### Return type
 
@@ -66,9 +65,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_sentiment_trending_stock_stock_code_get**
 > OptionsResponse v1_sentiment_trending_stock_stock_code_get(stock_code)
@@ -85,10 +84,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -107,9 +106,9 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
 
 ### Return type
 
@@ -127,9 +126,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_sentiment_tweet_stock_stock_code_get**
 > OptionsResponse v1_sentiment_tweet_stock_stock_code_get(stock_code)
@@ -146,10 +145,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -168,9 +167,9 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
 
 ### Return type
 
@@ -188,7 +187,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

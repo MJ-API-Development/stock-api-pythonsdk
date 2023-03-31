@@ -1,17 +1,16 @@
 # src.IntelligentStockMarketAPI.StocksApi
 
-All URIs are relative to *http://https://gateway.eod-stock-api.site/api*
+All URIs are relative to *https://gateway.eod-stock-api.site/api*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**v1_stock_code_stock_code_get**](StocksApi.md#v1_stock_code_stock_code_get) | **GET** /v1/stock/code/{stock_code} | 
-[**v1_stocks_country_country_get**](StocksApi.md#v1_stocks_country_country_get) | **GET** /v1/stocks/country/{country} | 
-[**v1_stocks_currency_currency_get**](StocksApi.md#v1_stocks_currency_currency_get) | **GET** /v1/stocks/currency/{currency} | 
-[**v1_stocks_exchange_code_exchange_code_get**](StocksApi.md#v1_stocks_exchange_code_exchange_code_get) | **GET** /v1/stocks/exchange/code/{exchange_code} | 
-[**v1_stocks_exchange_id_exchange_id_get**](StocksApi.md#v1_stocks_exchange_id_exchange_id_get) | **GET** /v1/stocks/exchange/id/{exchange_id} | 
-[**v1_stocks_get**](StocksApi.md#v1_stocks_get) | **GET** /v1/stocks | 
-[**v1_stocks_post**](StocksApi.md#v1_stocks_post) | **POST** /v1/stocks | 
-
+| Method                                                                                                  | HTTP request                                     | Description |
+|---------------------------------------------------------------------------------------------------------|--------------------------------------------------|-------------|
+| [**v1_stock_code_stock_code_get**](StocksApi.md#v1_stock_code_stock_code_get)                           | **GET** /v1/stock/code/{stock_code}              |             |
+| [**v1_stocks_country_country_get**](StocksApi.md#v1_stocks_country_country_get)                         | **GET** /v1/stocks/country/{country}             |             |
+| [**v1_stocks_currency_currency_get**](StocksApi.md#v1_stocks_currency_currency_get)                     | **GET** /v1/stocks/currency/{currency}           |             |
+| [**v1_stocks_exchange_code_exchange_code_get**](StocksApi.md#v1_stocks_exchange_code_exchange_code_get) | **GET** /v1/stocks/exchange/code/{exchange_code} |             |
+| [**v1_stocks_exchange_id_exchange_id_get**](StocksApi.md#v1_stocks_exchange_id_exchange_id_get)         | **GET** /v1/stocks/exchange/id/{exchange_id}     |             |
+| [**v1_stocks_get**](StocksApi.md#v1_stocks_get)                                                         | **GET** /v1/stocks                               |             |
+| [**v1_stocks_post**](StocksApi.md#v1_stocks_post)                                                       | **POST** /v1/stocks                              |             |
 
 # **v1_stock_code_stock_code_get**
 > StockResponse v1_stock_code_stock_code_get(stock_code)
@@ -28,10 +27,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -50,9 +49,9 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
 
 ### Return type
 
@@ -70,9 +69,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_stocks_country_country_get**
 > StockListResponse v1_stocks_country_country_get(country)
@@ -89,10 +88,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -111,9 +110,9 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **country** | **str**|  | 
+| Name        | Type    | Description | Notes |
+|-------------|---------|-------------|-------|
+| **country** | **str** |             |       |
 
 ### Return type
 
@@ -131,9 +130,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_stocks_currency_currency_get**
 > StockListResponse v1_stocks_currency_currency_get(currency)
@@ -150,10 +149,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -172,9 +171,9 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **currency** | **str**|  | 
+| Name         | Type    | Description | Notes |
+|--------------|---------|-------------|-------|
+| **currency** | **str** |             |       |
 
 ### Return type
 
@@ -192,9 +191,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_stocks_exchange_code_exchange_code_get**
 > StockListResponse v1_stocks_exchange_code_exchange_code_get(exchange_code)
@@ -211,10 +210,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -233,9 +232,9 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exchange_code** | **str**|  | 
+| Name              | Type    | Description | Notes |
+|-------------------|---------|-------------|-------|
+| **exchange_code** | **str** |             |       |
 
 ### Return type
 
@@ -253,9 +252,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_stocks_exchange_id_exchange_id_get**
 > StockListResponse v1_stocks_exchange_id_exchange_id_get(exchange_id)
@@ -272,10 +271,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -294,9 +293,9 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exchange_id** | **str**|  | 
+| Name            | Type    | Description | Notes |
+|-----------------|---------|-------------|-------|
+| **exchange_id** | **str** |             |       |
 
 ### Return type
 
@@ -314,9 +313,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_stocks_get**
 > StockListResponse v1_stocks_get()
@@ -333,10 +332,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -371,9 +370,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_stocks_post**
 > StockListResponse v1_stocks_post(body=body)
@@ -390,10 +389,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -412,9 +411,9 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**StockListRequest**](StockListRequest.md)|  | [optional] 
+| Name     | Type                                        | Description | Notes      |
+|----------|---------------------------------------------|-------------|------------|
+| **body** | [**StockListRequest**](StockListRequest.md) |             | [optional] |
 
 ### Return type
 
@@ -432,7 +431,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

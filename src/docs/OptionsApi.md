@@ -1,12 +1,11 @@
 # src.IntelligentStockMarketAPI.OptionsApi
 
-All URIs are relative to *http://https://gateway.eod-stock-api.site/api*
+All URIs are relative to *https://gateway.eod-stock-api.site/api*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**v1_stocks_contract_call_put_id_get**](OptionsApi.md#v1_stocks_contract_call_put_id_get) | **GET** /v1/stocks/contract/{call_put_id} | 
-[**v1_stocks_options_stock_stock_code_get**](OptionsApi.md#v1_stocks_options_stock_stock_code_get) | **GET** /v1/stocks/options/stock/{stock_code} | 
-
+| Method                                                                                             | HTTP request                                  | Description |
+|----------------------------------------------------------------------------------------------------|-----------------------------------------------|-------------|
+| [**v1_stocks_contract_call_put_id_get**](OptionsApi.md#v1_stocks_contract_call_put_id_get)         | **GET** /v1/stocks/contract/{call_put_id}     |             |
+| [**v1_stocks_options_stock_stock_code_get**](OptionsApi.md#v1_stocks_options_stock_stock_code_get) | **GET** /v1/stocks/options/stock/{stock_code} |             |
 
 # **v1_stocks_contract_call_put_id_get**
 > ContractResponse v1_stocks_contract_call_put_id_get(call_put_id)
@@ -23,10 +22,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -45,9 +44,9 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **call_put_id** | **str**|  | 
+| Name            | Type    | Description | Notes |
+|-----------------|---------|-------------|-------|
+| **call_put_id** | **str** |             |       |
 
 ### Return type
 
@@ -65,9 +64,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_stocks_options_stock_stock_code_get**
 > OptionsResponse v1_stocks_options_stock_stock_code_get(stock_code)
@@ -84,10 +83,10 @@ import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
@@ -106,9 +105,9 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
 
 ### Return type
 
@@ -126,7 +125,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
