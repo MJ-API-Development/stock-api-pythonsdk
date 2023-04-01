@@ -20,7 +20,6 @@
 
 - API version: v1
 - Package version: 0.0.3
-- Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 ## Requirements.
 
@@ -243,11 +242,25 @@ All URIs are relative to *https://gateway.eod-stock-api.site/api*
 
 ## Documentation For Authorization
 
-
 ## basicAuth
 
 - **Type**: 
   - apikey
+
+To authenticate your API requests, you will need to include your API key in the request parameters. 
+The API key is a unique identifier that associates your API usage with your account.
+
+To include your API key in a request, simply include it as a parameter named "apikey" in the request URL. 
+For example:
+
+```python
+    https://gateway.eod-stock-api.site/api/v1/exchanges?apikey=YOUR_API_KEY
+```
+
+Make sure to replace "YOUR_API_KEY" with your actual API key value.
+
+Note that when using our SDK you need to initialize your SDK with your API key refer to getting started
+section above.
 
 
 ## Author
