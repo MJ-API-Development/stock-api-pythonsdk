@@ -75,6 +75,8 @@ Please follow the [installation procedure](#installation--usage) and then run th
 #### Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 #### See configuration.py for a list of all supported configuration parameters.
 
+### EOD Data By Exchange and Date  
+
 ```python
 from __future__ import print_function
 
@@ -90,9 +92,9 @@ configuration = IntelligentStockMarketAPI.Configuration(
     apikey = "SECRET API KEY"
 )
 # Enter a context with an instance of the API client
-with src.IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance =IntelligentStockMarketAPI.EodApi(api_client)
+    api_instance = IntelligentStockMarketAPI.EodApi(api_client)
     date = '2022-02-02' # str | 
     exchange_code = 'TO' # str | "Country"="Canada", "name": "Toronto Exchange", "operating_mic": "XTSE" 
 
@@ -102,6 +104,37 @@ with src.IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     except ApiException as e:
         print("Exception when calling EodApi->v1_eod_date_exchange_code_get: %s\n" % e)    
 ```
+
+
+### Exchange Details with Complete Ticker List Endpoint
+```python
+
+from __future__ import print_function
+import time
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "https://gateway.eod-stock-api.site/api",
+    apikey = "SECRET API KEY"
+)
+
+
+# Enter a context with an instance of the API client
+with IntelligentStockMarketAPI.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = IntelligentStockMarketAPI.ExchangesApi(api_client)
+    exchange_code = 'TO' # str | Toronto Exchange Canada 
+
+    try:
+        api_response = api_instance.v1_exchange_exchange_with_tickers_code_exchange_code_get(exchange_code)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ExchangesApi->v1_exchange_exchange_with_tickers_code_exchange_code_get: %s\n" % e)
+```
+
 
 ## Documentation for API Endpoints
 
