@@ -1,15 +1,14 @@
-# openapi_client.FinancialNewsApi
+# Intelligent Stock Market API
 
-All URIs are relative to *http://https://gateway.eod-stock-api.site/api*
+All URIs are relative to *https://gateway.eod-stock-api.site/api*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**v1_news_article_uuid_get**](FinancialNewsApi.md#v1_news_article_uuid_get) | **GET** /v1/news/article/{uuid} | 
-[**v1_news_articles_bounded_upper_bound_get**](FinancialNewsApi.md#v1_news_articles_bounded_upper_bound_get) | **GET** /v1/news/articles-bounded/{upper_bound} | 
-[**v1_news_articles_by_date_date_get**](FinancialNewsApi.md#v1_news_articles_by_date_date_get) | **GET** /v1/news/articles-by-date/{_date} | 
-[**v1_news_articles_by_publisher_publisher_get**](FinancialNewsApi.md#v1_news_articles_by_publisher_publisher_get) | **GET** /v1/news/articles-by-publisher/{publisher} | 
-[**v1_news_articles_by_ticker_stock_code_get**](FinancialNewsApi.md#v1_news_articles_by_ticker_stock_code_get) | **GET** /v1/news/articles-by-ticker/{stock_code} | 
-
+| Method                                                                                                             | HTTP request                                       | Description |
+|--------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|-------------|
+| [**v1_news_article_uuid_get**](FinancialNewsApi.md#v1_news_article_uuid_get)                                       | **GET** /v1/news/article/{uuid}                    |             |
+| [**v1_news_articles_bounded_upper_bound_get**](FinancialNewsApi.md#v1_news_articles_bounded_upper_bound_get)       | **GET** /v1/news/articles-bounded/{upper_bound}    |             |
+| [**v1_news_articles_by_date_date_get**](FinancialNewsApi.md#v1_news_articles_by_date_date_get)                     | **GET** /v1/news/articles-by-date/{_date}          |             |
+| [**v1_news_articles_by_publisher_publisher_get**](FinancialNewsApi.md#v1_news_articles_by_publisher_publisher_get) | **GET** /v1/news/articles-by-publisher/{publisher} |             |
+| [**v1_news_articles_by_ticker_stock_code_get**](FinancialNewsApi.md#v1_news_articles_by_ticker_stock_code_get)     | **GET** /v1/news/articles-by-ticker/{stock_code}   |             |
 
 # **v1_news_article_uuid_get**
 > News v1_news_article_uuid_get(uuid)
@@ -23,20 +22,20 @@ Obtain Financial News Information related to listed companies
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FinancialNewsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
     uuid = 'uuid_example' # str | 
 
     try:
@@ -84,20 +83,20 @@ Get list of all News Upper Bound is an Integer indicating a total number of arti
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FinancialNewsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
     upper_bound = 56 # int | 
 
     try:
@@ -145,20 +144,20 @@ Get Articles Financial News By Date
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FinancialNewsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
     date = 'date_example' # str | 
 
     try:
@@ -206,20 +205,20 @@ Get News Financial News by publisher
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FinancialNewsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
     publisher = 'publisher_example' # str | 
 
     try:
@@ -267,20 +266,20 @@ Get Financial News Articles By Ticker
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "https://gateway.eod-stock-api.site/api"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FinancialNewsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
     stock_code = 'stock_code_example' # str | 
 
     try:
