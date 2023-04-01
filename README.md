@@ -126,7 +126,7 @@ configuration = IntelligentStockMarketAPI.Configuration(
 # To get your API KEY visit [Intelligent EOD Stock Market API](https://eod-stock-market-api.site/login)
 
 # Enter a context with an instance of the API client
-with IntelligentStockMarketAPI.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.ExchangesApi(api_client)
     exchange_code = 'TO' # str | Toronto Exchange Canada 
@@ -136,6 +136,69 @@ with IntelligentStockMarketAPI.ApiClient() as api_client:
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ExchangesApi->v1_exchange_exchange_with_tickers_code_exchange_code_get: %s\n" % e)
+```
+
+### Latest Financial News Feed
+### This will return the latest financial news articles grouped by their related tickers
+
+Get list of all News Upper Bound is an Integer indicating a total number of articles to return
+
+```python
+from __future__ import print_function
+import time
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
+)
+
+
+# Enter a context with an instance of the API client
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
+    upper_bound = 56 # int | 
+    try:
+        api_response = api_instance.v1_news_articles_bounded_upper_bound_get(upper_bound)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling FinancialNewsApi->v1_news_articles_bounded_upper_bound_get: %s\n" % e)
+```
+  
+
+Get Financial News Articles By Ticker
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
+)
+
+
+# Enter a context with an instance of the API client
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
+    stock_code = 'stock_code_example' # str | 
+
+    try:
+        api_response = api_instance.v1_news_articles_by_ticker_stock_code_get(stock_code)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling FinancialNewsApi->v1_news_articles_by_ticker_stock_code_get: %s\n" % e)
 ```
 
 

@@ -1,59 +1,60 @@
-# openapi_client.FundamentalsApi
+# Intelligent Stock Market API 
+## Companies Fundamentals DATA API
 
-All URIs are relative to *http://https://gateway.eod-stock-api.site/api*
+All URIs are relative to *https://gateway.eod-stock-api.site/api*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**v1_fundamental_company_stock_code_get**](FundamentalsApi.md#v1_fundamental_company_stock_code_get) | **GET** /v1/fundamental/company/{stock_code} | 
-[**v1_fundamental_general_get**](FundamentalsApi.md#v1_fundamental_general_get) | **GET** /v1/fundamental/general | 
-[**v1_fundamentals_annual_balance_sheet_filing_date_stock_code_get**](FundamentalsApi.md#v1_fundamentals_annual_balance_sheet_filing_date_stock_code_get) | **GET** /v1/fundamentals/annual-balance-sheet/{filing_date}/{stock_code} | 
-[**v1_fundamentals_company_address_id_fundamental_id_get**](FundamentalsApi.md#v1_fundamentals_company_address_id_fundamental_id_get) | **GET** /v1/fundamentals/company-address/id/{fundamental_id} | 
-[**v1_fundamentals_company_address_stock_stock_code_get**](FundamentalsApi.md#v1_fundamentals_company_address_stock_stock_code_get) | **GET** /v1/fundamentals/company-address/stock/{stock_code} | 
-[**v1_fundamentals_company_details_id_fundamental_id_get**](FundamentalsApi.md#v1_fundamentals_company_details_id_fundamental_id_get) | **GET** /v1/fundamentals/company-details/id/{fundamental_id} | 
-[**v1_fundamentals_company_details_stock_stock_code_get**](FundamentalsApi.md#v1_fundamentals_company_details_stock_stock_code_get) | **GET** /v1/fundamentals/company-details/stock/{stock_code} | 
-[**v1_fundamentals_company_insider_transactions_stock_code_stock_code_year_get**](FundamentalsApi.md#v1_fundamentals_company_insider_transactions_stock_code_stock_code_year_get) | **GET** /v1/fundamentals/company-insider-transactions/stock-code/{stock_code}/{year} | 
-[**v1_fundamentals_company_valuations_stock_code_stock_code_year_get**](FundamentalsApi.md#v1_fundamentals_company_valuations_stock_code_stock_code_year_get) | **GET** /v1/fundamentals/company-valuations/stock-code/{stock_code}/{year} | 
-[**v1_fundamentals_exchange_analyst_rankings_exchange_code_exchange_code_year_get**](FundamentalsApi.md#v1_fundamentals_exchange_analyst_rankings_exchange_code_exchange_code_year_get) | **GET** /v1/fundamentals/exchange-analyst-rankings/exchange-code/{exchange_code}/{year} | 
-[**v1_fundamentals_exchange_outstanding_shares_exchange_code_exchange_code_year_get**](FundamentalsApi.md#v1_fundamentals_exchange_outstanding_shares_exchange_code_exchange_code_year_get) | **GET** /v1/fundamentals/exchange-outstanding-shares/exchange-code/{exchange_code}/{year} | 
-[**v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get**](FundamentalsApi.md#v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get) | **GET** /v1/fundamentals/financial-statements/by-term/{_from}.{_to}/{stock_code}/{term} | 
-[**v1_fundamentals_financial_statements_company_statement_stock_code_year_get**](FundamentalsApi.md#v1_fundamentals_financial_statements_company_statement_stock_code_year_get) | **GET** /v1/fundamentals/financial-statements/company-statement/{stock_code}/{year} | 
-[**v1_fundamentals_financial_statements_exchange_year_exchange_code_year_get**](FundamentalsApi.md#v1_fundamentals_financial_statements_exchange_year_exchange_code_year_get) | **GET** /v1/fundamentals/financial-statements/exchange-year/{exchange_code}/{year} | 
-[**v1_fundamentals_financial_statements_filing_date_ticker_filing_date_stock_code_get**](FundamentalsApi.md#v1_fundamentals_financial_statements_filing_date_ticker_filing_date_stock_code_get) | **GET** /v1/fundamentals/financial-statements/filing-date-ticker/{filing_date}/{stock_code} | 
-[**v1_fundamentals_financial_statements_ticker_date_range_from_to_stock_code_get**](FundamentalsApi.md#v1_fundamentals_financial_statements_ticker_date_range_from_to_stock_code_get) | **GET** /v1/fundamentals/financial-statements/ticker-date-range/{_from}.{_to}/{stock_code} | 
-[**v1_fundamentals_financials_income_statements_statement_id_get**](FundamentalsApi.md#v1_fundamentals_financials_income_statements_statement_id_get) | **GET** /v1/fundamentals/financials/income-statements/{statement_id} | 
-[**v1_fundamentals_highlights_id_fundamental_id_get**](FundamentalsApi.md#v1_fundamentals_highlights_id_fundamental_id_get) | **GET** /v1/fundamentals/highlights/id/{fundamental_id} | 
-[**v1_fundamentals_highlights_stock_stock_code_get**](FundamentalsApi.md#v1_fundamentals_highlights_stock_stock_code_get) | **GET** /v1/fundamentals/highlights/stock/{stock_code} | 
-[**v1_fundamentals_quarterly_balance_sheet_filing_date_stock_code_get**](FundamentalsApi.md#v1_fundamentals_quarterly_balance_sheet_filing_date_stock_code_get) | **GET** /v1/fundamentals/quarterly-balance-sheet/{filing_date}/{stock_code} | 
-[**v1_fundamentals_tech_indicators_by_company_stock_code_stock_code_year_get**](FundamentalsApi.md#v1_fundamentals_tech_indicators_by_company_stock_code_stock_code_year_get) | **GET** /v1/fundamentals/tech-indicators-by-company/stock-code/{stock_code}/{year} | 
-[**v1_fundamentals_tech_indicators_by_exchange_exchange_code_exchange_code_year_get**](FundamentalsApi.md#v1_fundamentals_tech_indicators_by_exchange_exchange_code_exchange_code_year_get) | **GET** /v1/fundamentals/tech-indicators-by-exchange/exchange-code/{exchange_code}/{year} | 
+| Method                                                                                                                                                                                          | HTTP request                                                                                | Description |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-------------|
+| [**v1_fundamental_company_stock_code_get**](FundamentalsApi.md#v1_fundamental_company_stock_code_get)                                                                                           | **GET** /v1/fundamental/company/{stock_code}                                                |             |
+| [**v1_fundamental_general_get**](FundamentalsApi.md#v1_fundamental_general_get)                                                                                                                 | **GET** /v1/fundamental/general                                                             |             |
+| [**v1_fundamentals_annual_balance_sheet_filing_date_stock_code_get**](FundamentalsApi.md#v1_fundamentals_annual_balance_sheet_filing_date_stock_code_get)                                       | **GET** /v1/fundamentals/annual-balance-sheet/{filing_date}/{stock_code}                    |             |
+| [**v1_fundamentals_company_address_id_fundamental_id_get**](FundamentalsApi.md#v1_fundamentals_company_address_id_fundamental_id_get)                                                           | **GET** /v1/fundamentals/company-address/id/{fundamental_id}                                |             |
+| [**v1_fundamentals_company_address_stock_stock_code_get**](FundamentalsApi.md#v1_fundamentals_company_address_stock_stock_code_get)                                                             | **GET** /v1/fundamentals/company-address/stock/{stock_code}                                 |             |
+| [**v1_fundamentals_company_details_id_fundamental_id_get**](FundamentalsApi.md#v1_fundamentals_company_details_id_fundamental_id_get)                                                           | **GET** /v1/fundamentals/company-details/id/{fundamental_id}                                |             |
+| [**v1_fundamentals_company_details_stock_stock_code_get**](FundamentalsApi.md#v1_fundamentals_company_details_stock_stock_code_get)                                                             | **GET** /v1/fundamentals/company-details/stock/{stock_code}                                 |             |
+| [**v1_fundamentals_company_insider_transactions_stock_code_stock_code_year_get**](FundamentalsApi.md#v1_fundamentals_company_insider_transactions_stock_code_stock_code_year_get)               | **GET** /v1/fundamentals/company-insider-transactions/stock-code/{stock_code}/{year}        |             |
+| [**v1_fundamentals_company_valuations_stock_code_stock_code_year_get**](FundamentalsApi.md#v1_fundamentals_company_valuations_stock_code_stock_code_year_get)                                   | **GET** /v1/fundamentals/company-valuations/stock-code/{stock_code}/{year}                  |             |
+| [**v1_fundamentals_exchange_analyst_rankings_exchange_code_exchange_code_year_get**](FundamentalsApi.md#v1_fundamentals_exchange_analyst_rankings_exchange_code_exchange_code_year_get)         | **GET** /v1/fundamentals/exchange-analyst-rankings/exchange-code/{exchange_code}/{year}     |             |
+| [**v1_fundamentals_exchange_outstanding_shares_exchange_code_exchange_code_year_get**](FundamentalsApi.md#v1_fundamentals_exchange_outstanding_shares_exchange_code_exchange_code_year_get)     | **GET** /v1/fundamentals/exchange-outstanding-shares/exchange-code/{exchange_code}/{year}   |             |
+| [**v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get**](FundamentalsApi.md#v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get)                     | **GET** /v1/fundamentals/financial-statements/by-term/{_from}.{_to}/{stock_code}/{term}     |             |
+| [**v1_fundamentals_financial_statements_company_statement_stock_code_year_get**](FundamentalsApi.md#v1_fundamentals_financial_statements_company_statement_stock_code_year_get)                 | **GET** /v1/fundamentals/financial-statements/company-statement/{stock_code}/{year}         |             |
+| [**v1_fundamentals_financial_statements_exchange_year_exchange_code_year_get**](FundamentalsApi.md#v1_fundamentals_financial_statements_exchange_year_exchange_code_year_get)                   | **GET** /v1/fundamentals/financial-statements/exchange-year/{exchange_code}/{year}          |             |
+| [**v1_fundamentals_financial_statements_filing_date_ticker_filing_date_stock_code_get**](FundamentalsApi.md#v1_fundamentals_financial_statements_filing_date_ticker_filing_date_stock_code_get) | **GET** /v1/fundamentals/financial-statements/filing-date-ticker/{filing_date}/{stock_code} |             |
+| [**v1_fundamentals_financial_statements_ticker_date_range_from_to_stock_code_get**](FundamentalsApi.md#v1_fundamentals_financial_statements_ticker_date_range_from_to_stock_code_get)           | **GET** /v1/fundamentals/financial-statements/ticker-date-range/{_from}.{_to}/{stock_code}  |             |
+| [**v1_fundamentals_financials_income_statements_statement_id_get**](FundamentalsApi.md#v1_fundamentals_financials_income_statements_statement_id_get)                                           | **GET** /v1/fundamentals/financials/income-statements/{statement_id}                        |             |
+| [**v1_fundamentals_highlights_id_fundamental_id_get**](FundamentalsApi.md#v1_fundamentals_highlights_id_fundamental_id_get)                                                                     | **GET** /v1/fundamentals/highlights/id/{fundamental_id}                                     |             |
+| [**v1_fundamentals_highlights_stock_stock_code_get**](FundamentalsApi.md#v1_fundamentals_highlights_stock_stock_code_get)                                                                       | **GET** /v1/fundamentals/highlights/stock/{stock_code}                                      |             |
+| [**v1_fundamentals_quarterly_balance_sheet_filing_date_stock_code_get**](FundamentalsApi.md#v1_fundamentals_quarterly_balance_sheet_filing_date_stock_code_get)                                 | **GET** /v1/fundamentals/quarterly-balance-sheet/{filing_date}/{stock_code}                 |             |
+| [**v1_fundamentals_tech_indicators_by_company_stock_code_stock_code_year_get**](FundamentalsApi.md#v1_fundamentals_tech_indicators_by_company_stock_code_stock_code_year_get)                   | **GET** /v1/fundamentals/tech-indicators-by-company/stock-code/{stock_code}/{year}          |             |
+| [**v1_fundamentals_tech_indicators_by_exchange_exchange_code_exchange_code_year_get**](FundamentalsApi.md#v1_fundamentals_tech_indicators_by_exchange_exchange_code_exchange_code_year_get)     | **GET** /v1/fundamentals/tech-indicators-by-exchange/exchange-code/{exchange_code}/{year}   |             |
 
-
-# **v1_fundamental_company_stock_code_get**
+# **Fundamental Data By Company Stock Code /Ticker Symbol**
 > PublicFundamentalsResponse v1_fundamental_company_stock_code_get(stock_code)
 
 
 
-for each stock code return the fundamental data for the company
+for each stock code return the fundamental data of the company
 
 ### Example
 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
 
     try:
@@ -65,9 +66,9 @@ with openapi_client.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
 
 ### Return type
 
@@ -75,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -85,13 +86,12 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamental_general_get**
+# **General Fundamental Data For All Listed Companies**
 > GeneralResponse v1_fundamental_general_get()
-
 
 
 return general fundamental data for all companies
@@ -101,20 +101,21 @@ return general fundamental data for all companies
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     
     try:
         api_response = api_instance.v1_fundamental_general_get()
@@ -132,7 +133,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -142,9 +143,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_annual_balance_sheet_filing_date_stock_code_get**
 > AnnualBalanceSheetResponse v1_fundamentals_annual_balance_sheet_filing_date_stock_code_get(stock_code, filing_date)
@@ -158,20 +159,21 @@ given the filing date & balance_sheet_id return annual balance sheet
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
 filing_date = 'filing_date_example' # str | 
 
@@ -184,10 +186,10 @@ filing_date = 'filing_date_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
- **filing_date** | **str**|  | 
+| Name            | Type    | Description | Notes |
+|-----------------|---------|-------------|-------|
+| **stock_code**  | **str** |             |       |
+| **filing_date** | **str** |             |       |
 
 ### Return type
 
@@ -195,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -205,9 +207,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_company_address_id_fundamental_id_get**
 > AddressResponse v1_fundamentals_company_address_id_fundamental_id_get(fundamental_id)
@@ -221,20 +223,20 @@ returns company address data
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
-
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     fundamental_id = 'fundamental_id_example' # str | 
 
     try:
@@ -246,9 +248,9 @@ with openapi_client.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **fundamental_id** | **str**|  | 
+| Name               | Type    | Description | Notes |
+|--------------------|---------|-------------|-------|
+| **fundamental_id** | **str** |             |       |
 
 ### Return type
 
@@ -256,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -264,11 +266,11 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | get response for company address |  -  |
+| Status code | Description                      | Response headers |
+|-------------|----------------------------------|------------------|
+| **0**       | get response for company address | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_company_address_stock_stock_code_get**
 > AddressResponse v1_fundamentals_company_address_stock_stock_code_get(stock_code)
@@ -282,20 +284,21 @@ returns company address data
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
 
     try:
@@ -307,9 +310,9 @@ with openapi_client.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
 
 ### Return type
 
@@ -317,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -325,11 +328,11 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**0** | get response for company address |  -  |
+| Status code | Description                      | Response headers |
+|-------------|----------------------------------|------------------|
+| **0**       | get response for company address | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_company_details_id_fundamental_id_get**
 > GeneralResponse v1_fundamentals_company_details_id_fundamental_id_get(fundamental_id)
@@ -343,20 +346,21 @@ returns company details from company fundamental data
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     fundamental_id = 'fundamental_id_example' # str | 
 
     try:
@@ -368,9 +372,9 @@ with openapi_client.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **fundamental_id** | **str**|  | 
+| Name               | Type    | Description | Notes |
+|--------------------|---------|-------------|-------|
+| **fundamental_id** | **str** |             |       |
 
 ### Return type
 
@@ -378,7 +382,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -388,9 +392,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_company_details_stock_stock_code_get**
 > GeneralResponse v1_fundamentals_company_details_stock_stock_code_get(stock_code)
@@ -404,20 +408,21 @@ returns company details from company fundamental data
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
 
     try:
@@ -429,9 +434,9 @@ with openapi_client.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
 
 ### Return type
 
@@ -439,7 +444,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -449,9 +454,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_company_insider_transactions_stock_code_stock_code_year_get**
 > OptionsResponse v1_fundamentals_company_insider_transactions_stock_code_stock_code_year_get(stock_code, year)
@@ -465,20 +470,21 @@ Given companies stock_code, and year return a list of insider transactions
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
 year = 'year_example' # str | 
 
@@ -491,10 +497,10 @@ year = 'year_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
- **year** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
+| **year**       | **str** |             |       |
 
 ### Return type
 
@@ -502,7 +508,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -512,9 +518,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_company_valuations_stock_code_stock_code_year_get**
 > OptionsResponse v1_fundamentals_company_valuations_stock_code_stock_code_year_get(stock_code, year)
@@ -528,20 +534,21 @@ Get Company Valuations Data for the year
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
 year = 'year_example' # str | 
 
@@ -554,10 +561,10 @@ year = 'year_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
- **year** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
+| **year**       | **str** |             |       |
 
 ### Return type
 
@@ -565,7 +572,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -575,9 +582,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_exchange_analyst_rankings_exchange_code_exchange_code_year_get**
 > OptionsResponse v1_fundamentals_exchange_analyst_rankings_exchange_code_exchange_code_year_get(exchange_code, year)
@@ -591,20 +598,21 @@ Get Analyst rankings for all companies listed under a specific exchange
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     exchange_code = 'exchange_code_example' # str | 
 year = 'year_example' # str | 
 
@@ -617,10 +625,10 @@ year = 'year_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exchange_code** | **str**|  | 
- **year** | **str**|  | 
+| Name              | Type    | Description | Notes |
+|-------------------|---------|-------------|-------|
+| **exchange_code** | **str** |             |       |
+| **year**          | **str** |             |       |
 
 ### Return type
 
@@ -628,7 +636,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -638,9 +646,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_exchange_outstanding_shares_exchange_code_exchange_code_year_get**
 > OptionsResponse v1_fundamentals_exchange_outstanding_shares_exchange_code_exchange_code_year_get(exchange_code, year)
@@ -654,22 +662,23 @@ Given an exchange_code and a year return all outstanding shares for all companie
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     exchange_code = 'exchange_code_example' # str | 
-year = 'year_example' # str | 
+    year = 'year_example' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_exchange_outstanding_shares_exchange_code_exchange_code_year_get(exchange_code, year)
@@ -680,10 +689,10 @@ year = 'year_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exchange_code** | **str**|  | 
- **year** | **str**|  | 
+| Name              | Type    | Description | Notes |
+|-------------------|---------|-------------|-------|
+| **exchange_code** | **str** |             |       |
+| **year**          | **str** |             |       |
 
 ### Return type
 
@@ -691,7 +700,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -701,9 +710,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get**
 > OptionsResponse v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get(stock_code, to, _from, term)
@@ -717,24 +726,25 @@ Return Annual or Quarterly Statements based on Term, Stock Code, and dates _from
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
-to = 'to_example' # str | 
-_from = '_from_example' # str | 
-term = 'term_example' # str | 
+    to = 'to_example' # str | 
+    _from = '_from_example' # str | 
+    term = 'term_example' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get(stock_code, to, _from, term)
@@ -745,12 +755,12 @@ term = 'term_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
- **to** | **str**|  | 
- **_from** | **str**|  | 
- **term** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
+| **to**         | **str** |             |       |
+| **_from**      | **str** |             |       |
+| **term**       | **str** |             |       |
 
 ### Return type
 
@@ -758,7 +768,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -768,9 +778,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_financial_statements_company_statement_stock_code_year_get**
 > OptionsResponse v1_fundamentals_financial_statements_company_statement_stock_code_year_get(stock_code, year)
@@ -784,22 +794,23 @@ given an a stock_code and a year return a complete financial statements for the 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
-year = 'year_example' # str | 
+    year = 'year_example' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_financial_statements_company_statement_stock_code_year_get(stock_code, year)
@@ -810,10 +821,10 @@ year = 'year_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
- **year** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
+| **year**       | **str** |             |       |
 
 ### Return type
 
@@ -821,7 +832,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -831,9 +842,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_financial_statements_exchange_year_exchange_code_year_get**
 > OptionsResponse v1_fundamentals_financial_statements_exchange_year_exchange_code_year_get(exchange_code, year)
@@ -847,22 +858,23 @@ Given an exchange_code and a year return a complete list of financial statements
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     exchange_code = 'exchange_code_example' # str | 
-year = 'year_example' # str | 
+    year = 'year_example' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_financial_statements_exchange_year_exchange_code_year_get(exchange_code, year)
@@ -873,10 +885,10 @@ year = 'year_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exchange_code** | **str**|  | 
- **year** | **str**|  | 
+| Name              | Type    | Description | Notes |
+|-------------------|---------|-------------|-------|
+| **exchange_code** | **str** |             |       |
+| **year**          | **str** |             |       |
 
 ### Return type
 
@@ -884,7 +896,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -894,9 +906,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_financial_statements_filing_date_ticker_filing_date_stock_code_get**
 > OptionsResponse v1_fundamentals_financial_statements_filing_date_ticker_filing_date_stock_code_get(stock_code, filing_date)
@@ -910,22 +922,23 @@ Returns Income Statements by Filing Date and Company Stock Code
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
-filing_date = 'filing_date_example' # str | 
+    filing_date = 'filing_date_example' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_financial_statements_filing_date_ticker_filing_date_stock_code_get(stock_code, filing_date)
@@ -936,10 +949,10 @@ filing_date = 'filing_date_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
- **filing_date** | **str**|  | 
+| Name            | Type    | Description | Notes |
+|-----------------|---------|-------------|-------|
+| **stock_code**  | **str** |             |       |
+| **filing_date** | **str** |             |       |
 
 ### Return type
 
@@ -947,7 +960,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -957,9 +970,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_financial_statements_ticker_date_range_from_to_stock_code_get**
 > OptionsResponse v1_fundamentals_financial_statements_ticker_date_range_from_to_stock_code_get(stock_code, to, _from)
@@ -973,23 +986,24 @@ Given two dates and a stock date return all financial statements, _from & _to sh
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
-to = 'to_example' # str | 
-_from = '_from_example' # str | 
+    to = 'to_example' # str | 
+    _from = '_from_example' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_financial_statements_ticker_date_range_from_to_stock_code_get(stock_code, to, _from)
@@ -1000,11 +1014,11 @@ _from = '_from_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
- **to** | **str**|  | 
- **_from** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
+| **to**         | **str** |             |       |
+| **_from**      | **str** |             |       |
 
 ### Return type
 
@@ -1012,7 +1026,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -1022,9 +1036,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_financials_income_statements_statement_id_get**
 > OptionsResponse v1_fundamentals_financials_income_statements_statement_id_get(statement_id)
@@ -1038,20 +1052,21 @@ Will return Company Income Statement By Statement ID
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     statement_id = 'statement_id_example' # str | 
 
     try:
@@ -1063,9 +1078,9 @@ with openapi_client.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **statement_id** | **str**|  | 
+| Name             | Type    | Description | Notes |
+|------------------|---------|-------------|-------|
+| **statement_id** | **str** |             |       |
 
 ### Return type
 
@@ -1073,7 +1088,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -1083,9 +1098,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_highlights_id_fundamental_id_get**
 > HighlightsResponse v1_fundamentals_highlights_id_fundamental_id_get(fundamental_id)
@@ -1099,20 +1114,21 @@ get fundamental highlights data from either fundamental_id or stock_codes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     fundamental_id = 'fundamental_id_example' # str | 
 
     try:
@@ -1124,9 +1140,9 @@ with openapi_client.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **fundamental_id** | **str**|  | 
+| Name               | Type    | Description | Notes |
+|--------------------|---------|-------------|-------|
+| **fundamental_id** | **str** |             |       |
 
 ### Return type
 
@@ -1134,7 +1150,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -1144,9 +1160,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_highlights_stock_stock_code_get**
 > HighlightsResponse v1_fundamentals_highlights_stock_stock_code_get(stock_code)
@@ -1160,20 +1176,21 @@ get fundamental highlights data from either fundamental_id or stock_codes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
 
     try:
@@ -1185,9 +1202,9 @@ with openapi_client.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
 
 ### Return type
 
@@ -1195,7 +1212,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -1205,9 +1222,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_quarterly_balance_sheet_filing_date_stock_code_get**
 > QuarterlyBalanceResponse v1_fundamentals_quarterly_balance_sheet_filing_date_stock_code_get(stock_code, filing_date)
@@ -1221,22 +1238,23 @@ given filing_date and balance_sheet_id return Quarterly Balance Sheet
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
-filing_date = 'filing_date_example' # str | 
+    filing_date = 'filing_date_example' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_quarterly_balance_sheet_filing_date_stock_code_get(stock_code, filing_date)
@@ -1247,10 +1265,10 @@ filing_date = 'filing_date_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
- **filing_date** | **str**|  | 
+| Name            | Type    | Description | Notes |
+|-----------------|---------|-------------|-------|
+| **stock_code**  | **str** |             |       |
+| **filing_date** | **str** |             |       |
 
 ### Return type
 
@@ -1258,7 +1276,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -1268,9 +1286,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_tech_indicators_by_company_stock_code_stock_code_year_get**
 > OptionsResponse v1_fundamentals_tech_indicators_by_company_stock_code_stock_code_year_get(stock_code, year)
@@ -1284,22 +1302,23 @@ Given a company stock_code and a year return technical indicators for that year
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+     host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
-year = 'year_example' # str | 
+    year = 'year_example' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_tech_indicators_by_company_stock_code_stock_code_year_get(stock_code, year)
@@ -1310,10 +1329,10 @@ year = 'year_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
- **year** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
+| **year**       | **str** |             |       |
 
 ### Return type
 
@@ -1321,7 +1340,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -1331,9 +1350,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_fundamentals_tech_indicators_by_exchange_exchange_code_exchange_code_year_get**
 > OptionsResponse v1_fundamentals_tech_indicators_by_exchange_exchange_code_exchange_code_year_get(exchange_code, year)
@@ -1347,22 +1366,23 @@ Given an exchange_code and a year return all technical indicators released for c
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://https://gateway.eod-stock-api.site/api
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://https://gateway.eod-stock-api.site/api"
+configuration = IntelligentStockMarketAPI.Configuration(
+    host = "http://https://gateway.eod-stock-api.site/api",
+    api_key = "SECRET API KEY",
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.FundamentalsApi(api_client)
+    api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     exchange_code = 'exchange_code_example' # str | 
-year = 'year_example' # str | 
+    year = 'year_example' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_tech_indicators_by_exchange_exchange_code_exchange_code_year_get(exchange_code, year)
@@ -1373,10 +1393,10 @@ year = 'year_example' # str |
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exchange_code** | **str**|  | 
- **year** | **str**|  | 
+| Name              | Type    | Description | Notes |
+|-------------------|---------|-------------|-------|
+| **exchange_code** | **str** |             |       |
+| **year**          | **str** |             |       |
 
 ### Return type
 
@@ -1384,7 +1404,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+api_key
 
 ### HTTP request headers
 
@@ -1394,7 +1414,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
