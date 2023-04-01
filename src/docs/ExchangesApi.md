@@ -85,21 +85,23 @@ from pprint import pprint
 # Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = IntelligentStockMarketAPI.Configuration(
-    host = "https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api",
+    api_key = "API Key"
 )
 
 
 # Enter a context with an instance of the API client
-with IntelligentStockMarketAPI.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.ExchangesApi(api_client)
-    exchange_code = 'exchange_code_example' # str | 
+    exchange_code = 'TO' # str | 
 
     try:
         api_response = api_instance.v1_exchange_exchange_with_tickers_code_exchange_code_get(exchange_code)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling ExchangesApi->v1_exchange_exchange_with_tickers_code_exchange_code_get: %s\n" % e)
+        print("Exception when calling ExchangesApi: {}".format(e))
+
 ```
 
 ### Parameters
