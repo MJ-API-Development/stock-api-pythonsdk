@@ -170,7 +170,7 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
 ```
   
 
-Get Financial News Articles By Ticker
+### Get Financial News Articles By Ticker
 
 ### Example
 

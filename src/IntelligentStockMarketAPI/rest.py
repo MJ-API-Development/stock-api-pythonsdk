@@ -24,6 +24,7 @@ import certifi
 import six
 from six.moves.urllib.parse import urlencode
 import urllib3
+from urllib3.exceptions import SSLError
 
 from src.IntelligentStockMarketAPI.exceptions import ApiException, ApiValueError
 
@@ -211,7 +212,7 @@ class RESTClientObject(object):
                                               preload_content=_preload_content,
                                               timeout=timeout,
                                               headers=headers)
-        except urllib3.exceptions.SSLError as e:
+        except SSLError as e:
             msg = "{0}\n{1}".format(type(e).__name__, str(e))
             raise ApiException(status=0, reason=msg)
 

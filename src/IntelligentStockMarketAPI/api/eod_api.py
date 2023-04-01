@@ -292,18 +292,18 @@ class EodApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_eod_from_to_exchange_code_get(self, exchange_code, to, _from, **kwargs):  # noqa: E501
+    def v1_eod_from_to_exchange_code_get(self, exchange_code, _to, _from, **kwargs):  # noqa: E501
         """v1_eod_from_to_exchange_code_get  # noqa: E501
 
         return a list of eod historical data on exchange_code from one date to the other  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_eod_from_to_exchange_code_get(exchange_code, to, _from, async_req=True)
+        >>> thread = api.v1_eod_from_to_exchange_code_get(exchange_code, _to, _from, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str exchange_code: (required)
-        :param str to: (required)
+        :param str _to: (required)
         :param str _from: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -317,20 +317,20 @@ class EodApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.v1_eod_from_to_exchange_code_get_with_http_info(exchange_code, to, _from, **kwargs)  # noqa: E501
+        return self.v1_eod_from_to_exchange_code_get_with_http_info(exchange_code, _to, _from, **kwargs)  # noqa: E501
 
-    def v1_eod_from_to_exchange_code_get_with_http_info(self, exchange_code, to, _from, **kwargs):  # noqa: E501
+    def v1_eod_from_to_exchange_code_get_with_http_info(self, exchange_code, _to, _from, **kwargs):  # noqa: E501
         """v1_eod_from_to_exchange_code_get  # noqa: E501
 
         return a list of eod historical data on exchange_code from one date to the other  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_eod_from_to_exchange_code_get_with_http_info(exchange_code, to, _from, async_req=True)
+        >>> thread = api.v1_eod_from_to_exchange_code_get_with_http_info(exchange_code, _to, _from, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str exchange_code: (required)
-        :param str to: (required)
+        :param str _to: (required)
         :param str _from: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -350,7 +350,7 @@ class EodApi(object):
 
         all_params = [
             'exchange_code',
-            'to',
+            '_to',
             '_from'
         ]
         all_params.extend(
@@ -388,8 +388,8 @@ class EodApi(object):
         path_params = {}
         if 'exchange_code' in local_var_params:
             path_params['exchange_code'] = local_var_params['exchange_code']  # noqa: E501
-        if 'to' in local_var_params:
-            path_params['_to'] = local_var_params['to']  # noqa: E501
+        if '_to' in local_var_params:
+            path_params['_to'] = local_var_params['_to']  # noqa: E501
         if '_from' in local_var_params:
             path_params['_from'] = local_var_params['_from']  # noqa: E501
 
@@ -424,18 +424,18 @@ class EodApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_eod_from_to_stock_code_get(self, stock_code, to, _from, **kwargs):  # noqa: E501
+    def v1_eod_from_to_stock_code_get(self, stock_code, _to, _from, **kwargs):  # noqa: E501
         """v1_eod_from_to_stock_code_get  # noqa: E501
 
         will return end of day data for a certain stock at a given date  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_eod_from_to_stock_code_get(stock_code, to, _from, async_req=True)
+        >>> thread = api.v1_eod_from_to_stock_code_get(stock_code, _to, _from, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str stock_code: (required)
-        :param str to: (required)
+        :param str _to: (required)
         :param str _from: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -449,15 +449,15 @@ class EodApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.v1_eod_from_to_stock_code_get_with_http_info(stock_code, to, _from, **kwargs)  # noqa: E501
+        return self.v1_eod_from_to_stock_code_get_with_http_info(stock_code, _to, _from, **kwargs)  # noqa: E501
 
-    def v1_eod_from_to_stock_code_get_with_http_info(self, stock_code, to, _from, **kwargs):  # noqa: E501
+    def v1_eod_from_to_stock_code_get_with_http_info(self, stock_code, _to, _from, **kwargs):  # noqa: E501
         """v1_eod_from_to_stock_code_get  # noqa: E501
 
         will return end of day data for a certain stock at a given date  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_eod_from_to_stock_code_get_with_http_info(stock_code, to, _from, async_req=True)
+        >>> thread = api.v1_eod_from_to_stock_code_get_with_http_info(stock_code, _to, _from, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -482,7 +482,7 @@ class EodApi(object):
 
         all_params = [
             'stock_code',
-            'to',
+            '_to',
             '_from'
         ]
         all_params.extend(
@@ -507,8 +507,8 @@ class EodApi(object):
                                                         local_var_params['stock_code'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `stock_code` when calling `v1_eod_from_to_stock_code_get`")  # noqa: E501
         # verify the required parameter 'to' is set
-        if self.api_client.client_side_validation and ('to' not in local_var_params or  # noqa: E501
-                                                        local_var_params['to'] is None):  # noqa: E501
+        if self.api_client.client_side_validation and ('_to' not in local_var_params or  # noqa: E501
+                                                        local_var_params['_to'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `to` when calling `v1_eod_from_to_stock_code_get`")  # noqa: E501
         # verify the required parameter '_from' is set
         if self.api_client.client_side_validation and ('_from' not in local_var_params or  # noqa: E501
@@ -520,8 +520,8 @@ class EodApi(object):
         path_params = {}
         if 'stock_code' in local_var_params:
             path_params['stock_code'] = local_var_params['stock_code']  # noqa: E501
-        if 'to' in local_var_params:
-            path_params['_to'] = local_var_params['to']  # noqa: E501
+        if '_to' in local_var_params:
+            path_params['_to'] = local_var_params['_to']  # noqa: E501
         if '_from' in local_var_params:
             path_params['_from'] = local_var_params['_from']  # noqa: E501
 
