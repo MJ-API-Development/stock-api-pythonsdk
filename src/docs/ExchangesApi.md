@@ -1,4 +1,4 @@
-# src.IntelligentStockMarketAPI.ExchangesApi
+# Intelligent Stock Market API - Exchange API
 
 All URIs are relative to *https://gateway.eod-stock-api.site/api*
 
@@ -12,10 +12,7 @@ All URIs are relative to *https://gateway.eod-stock-api.site/api*
 | [**v1_exchange_post**](ExchangesApi.md#v1_exchange_post)                                                                                 | **POST** /v1/exchange                                           |             |
 | [**v1_exchanges_get**](ExchangesApi.md#v1_exchanges_get)                                                                                 | **GET** /v1/exchanges                                           |             |
 
-# **v1_exchange_code_exchange_code_get**
-> ExchangeResponse v1_exchange_code_exchange_code_get(exchange_code)
-
-
+## **Given Exchange ID or code Return Exchange Data**
 
 given exchange_id or exchange_code code will return exchange_code data
 
@@ -23,28 +20,29 @@ given exchange_id or exchange_code code will return exchange_code data
 
 ```python
 from __future__ import print_function
-import time
 import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = src.IntelligentStockMarketAPI.Configuration(
-    host = "https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api",
+    api_key= "API KEY"
 )
 
 
 # Enter a context with an instance of the API client
-with src.IntelligentStockMarketAPI.ApiClient() as api_client:
+with src.IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = src.IntelligentStockMarketAPI.ExchangesApi(api_client)
-    exchange_code = 'exchange_code_example' # str | 
+    exchange_code = 'TO' # str | Code is for Toronto Stock Exchange - see list of exchanges for complete list of codes 
 
     try:
         api_response = api_instance.v1_exchange_code_exchange_code_get(exchange_code)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling ExchangesApi->v1_exchange_code_exchange_code_get: %s\n" % e)
+        print("Exception {}".format(e))
+
 ```
 
 ### Parameters
@@ -59,17 +57,17 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Authorization
 
-No authorization required
+api_key -> can be obtained from our website at https://eod-stock-api.site
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json; charset=utf-8
  - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -120,7 +118,7 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Authorization
 
-No authorization required
+api_key -> can be obtained from our website at https://eod-stock-api.site
 
 ### HTTP request headers
 
@@ -181,7 +179,7 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Authorization
 
-No authorization required
+api_key -> can be obtained from our website at https://eod-stock-api.site
 
 ### HTTP request headers
 
@@ -242,7 +240,7 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Authorization
 
-No authorization required
+api_key -> can be obtained from our website at https://eod-stock-api.site
 
 ### HTTP request headers
 
@@ -303,7 +301,7 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Authorization
 
-No authorization required
+api_key -> can be obtained from our website at https://eod-stock-api.site
 
 ### HTTP request headers
 
@@ -364,7 +362,7 @@ with src.IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Authorization
 
-No authorization required
+api_key -> can be obtained from our website at https://eod-stock-api.site
 
 ### HTTP request headers
 
@@ -421,7 +419,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+api_key -> can be obtained from our website at https://eod-stock-api.site
 
 ### HTTP request headers
 
