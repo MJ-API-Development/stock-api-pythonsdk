@@ -83,6 +83,8 @@ import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 
+# To get your API KEY visit [Intteligent EOD Stock Market API](https://eod-stock-market-api.site/login) 
+# and create your free acoount 
 configuration = IntelligentStockMarketAPI.Configuration(
     host = "https://gateway.eod-stock-api.site/api",
     apikey = "SECRET API KEY"
