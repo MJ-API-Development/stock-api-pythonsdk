@@ -85,12 +85,15 @@ import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 
-# To get your API KEY visit [Intteligent EOD Stock Market API](https://eod-stock-market-api.site/login) 
+# To get your API KEY visit [Intelligent EOD Stock Market API](https://eod-stock-market-api.site/login) 
 # and create your free acoount 
 configuration = IntelligentStockMarketAPI.Configuration(
     host = "https://gateway.eod-stock-api.site/api",
-    apikey = "SECRET API KEY"
+    api_key = "SECRET API KEY"
 )
+
+# Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
+# See configuration.py for a list of all supported configuration parameters.
 # Enter a context with an instance of the API client
 with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -118,9 +121,9 @@ from pprint import pprint
 # See configuration.py for a list of all supported configuration parameters.
 configuration = IntelligentStockMarketAPI.Configuration(
     host = "https://gateway.eod-stock-api.site/api",
-    apikey = "SECRET API KEY"
+    api_key = "SECRET API KEY"
 )
-
+# To get your API KEY visit [Intelligent EOD Stock Market API](https://eod-stock-market-api.site/login)
 
 # Enter a context with an instance of the API client
 with IntelligentStockMarketAPI.ApiClient() as api_client:
