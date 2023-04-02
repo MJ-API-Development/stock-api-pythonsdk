@@ -20,6 +20,8 @@ import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.models.sentiment import Sentiment  # noqa: E501
 from src.IntelligentStockMarketAPI.rest import ApiException
 
+
+# noinspection PyMethodMayBeStatic
 class TestSentiment(unittest.TestCase):
     """Sentiment unit test stubs"""
 

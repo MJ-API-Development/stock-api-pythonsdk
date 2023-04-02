@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import src.IntelligentStockMarketAPI
+
 from src.IntelligentStockMarketAPI.models.address_response import AddressResponse  # noqa: E501
 from src.IntelligentStockMarketAPI.rest import ApiException
 

@@ -12,11 +12,8 @@
 from __future__ import absolute_import
 
 import unittest
-import datetime
 
-import IntelligentStockMarketAPI
-from IntelligentStockMarketAPI.models.analyst import Analyst  # noqa: E501
-from IntelligentStockMarketAPI.rest import ApiException
+from src.IntelligentStockMarketAPI.models.analyst import Analyst  # noqa: E501
 
 
 # noinspection PyMethodMayBeStatic

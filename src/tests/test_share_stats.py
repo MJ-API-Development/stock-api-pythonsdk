@@ -20,6 +20,8 @@ import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.models.share_stats import ShareStats  # noqa: E501
 from src.IntelligentStockMarketAPI.rest import ApiException
 
+
+# noinspection PyMethodMayBeStatic
 class TestShareStats(unittest.TestCase):
     """ShareStats unit test stubs"""
 

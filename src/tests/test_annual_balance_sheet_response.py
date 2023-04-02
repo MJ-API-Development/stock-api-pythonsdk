@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import IntelligentStockMarketAPI
-from IntelligentStockMarketAPI.models.annual_balance_sheet_response import AnnualBalanceSheetResponse  # noqa: E501
-from IntelligentStockMarketAPI.rest import ApiException
+import src.IntelligentStockMarketAPI as IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.annual_balance_sheet_response import AnnualBalanceSheetResponse  # noqa: E501
+from src.IntelligentStockMarketAPI.rest import ApiException
 
 
 # noinspection PyMethodMayBeStatic

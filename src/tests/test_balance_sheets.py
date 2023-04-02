@@ -12,16 +12,13 @@
 
 from __future__ import absolute_import
 
-import unittest
 import datetime
+import unittest
 
-from IntelligentStockMarketAPI.models.annual_balance_sheet import AnnualBalanceSheet
-from IntelligentStockMarketAPI.models.balance_sheet import BalanceSheet
-from IntelligentStockMarketAPI.models.quarterly_balance_sheet import QuarterlyBalanceSheet
-
-import src.IntelligentStockMarketAPI
+from src.IntelligentStockMarketAPI.models.annual_balance_sheet import AnnualBalanceSheet
+from src.IntelligentStockMarketAPI.models.balance_sheet import BalanceSheet
 from src.IntelligentStockMarketAPI.models.balance_sheets import BalanceSheets  # noqa: E501
-from src.IntelligentStockMarketAPI.rest import ApiException
+from src.IntelligentStockMarketAPI.models.quarterly_balance_sheet import QuarterlyBalanceSheet
 
 
 class TestBalanceSheets(unittest.TestCase):

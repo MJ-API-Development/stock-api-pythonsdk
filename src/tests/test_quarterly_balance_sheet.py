@@ -37,7 +37,7 @@ class TestQuarterlyBalanceSheet(unittest.TestCase):
         # model = src.IntelligentStockMarketAPI.models.quarterly_balance_sheet.QuarterlyBalanceSheet()  # noqa: E501
         if include_optional :
             return QuarterlyBalanceSheet(
-                balance_sheet = src.IntelligentStockMarketAPI.models._balance_sheet._BalanceSheet(
+                balance_sheet = src.IntelligentStockMarketAPI.models._balance_sheet.BalanceSheet(
                     accounts_payable = 1.337, 
                     accumulated_amortization = 1.337, 
                     accumulated_depreciation = 1.337, 
