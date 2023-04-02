@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "Intelligent-Stock-Market-API"
-VERSION = "0.0.3"
+VERSION = "0.0.6"
 # To install the library, run the following
 #
 # python setup.py install
@@ -23,7 +23,7 @@ VERSION = "0.0.3"
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
-
+PYTHON_REQUIRES = '>=3.7'
 setup(
     name=NAME,
     version=VERSION,
@@ -31,11 +31,21 @@ setup(
     author="MJ API Development",
     author_email="support@eod-stock-api.site",
     url="https://eod-stock-api.site",
+    project_urls={
+        'Documentation': 'https://github.com/MJ-API-Development/stock-api-pythonsdk',
+        'Source': 'https://github.com/MJ-API-Development/stock-api-pythonsdk',
+        'Tracker': 'https://github.com/MJ-API-Development/stock-api-pythonsdk/issues',
+        'Subscribe - API Keys': 'https://eod-stock-api.site/login#signup',
+        'Intelligent Stock Market API': 'https://eod-stock-api.site',
+        'API Gateway': 'https://gateway.eod-stock-api.site'
+    },
     keywords=["OpenAPI", "Intelligent EOD Stock Market API", "EOD STOCK API", "Financial News API", "Financial Social Media Trends"],
     install_requires=REQUIRES,
+    python_requires=PYTHON_REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
     license="Apache 2.0",
+
     long_description="""
     The Intelligent EOD Stocks API is an end-of-day stock API that provides worldwide stock information. 
     This API is intended for use by web application developers and service providers who need up-to-date and always 
