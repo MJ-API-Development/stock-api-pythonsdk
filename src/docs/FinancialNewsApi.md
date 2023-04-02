@@ -55,11 +55,11 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-No authorization required
+api key - obtainable from our website - subscribe here https://eod-stock-api.site/login
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -69,9 +69,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_news_articles_bounded_upper_bound_get**
-> NewsResponseList v1_news_articles_bounded_upper_bound_get(upper_bound)
-
+# **Return News Bounded by an Upper Limit**
 
 
 Get list of all News Upper Bound is an Integer indicating a total number of articles to return
@@ -87,21 +85,22 @@ from pprint import pprint
 # Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = IntelligentStockMarketAPI.Configuration(
-    host = "https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api",
+    api_key= "API Key"
 )
 
 
 # Enter a context with an instance of the API client
-with IntelligentStockMarketAPI.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
-    upper_bound = 56 # int | 
+    upper_bound = 25 # int |  
 
     try:
         api_response = api_instance.v1_news_articles_bounded_upper_bound_get(upper_bound)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FinancialNewsApi->v1_news_articles_bounded_upper_bound_get: %s\n" % e)
+        print("Exception when calling Financial News Api : {}".format(e))
 ```
 
 ### Parameters
@@ -116,21 +115,21 @@ with IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Authorization
 
-No authorization required
+api key - obtainable from our website - subscribe here https://eod-stock-api.site/login
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **0**       |             | -                |
+|------------|-------------|------------------|
+| **200**    |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_news_articles_by_date_date_get**
+# **Articles By Specific Dates**
 > News v1_news_articles_by_date_date_get(date)
 
 
@@ -148,21 +147,22 @@ from pprint import pprint
 # Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = IntelligentStockMarketAPI.Configuration(
-    host = "https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api",
+    api_key = "API Key"
 )
 
 
 # Enter a context with an instance of the API client
-with IntelligentStockMarketAPI.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
-    date = 'date_example' # str | 
+    date = '2022-04-01' # str | 
 
     try:
         api_response = api_instance.v1_news_articles_by_date_date_get(date)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FinancialNewsApi->v1_news_articles_by_date_date_get: %s\n" % e)
+        print("Exception when calling Financial News Api {}".format(e))
 ```
 
 ### Parameters
@@ -177,11 +177,11 @@ with IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Authorization
 
-No authorization required
+api key - obtainable from our website - subscribe here https://eod-stock-api.site/login
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -191,10 +191,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_news_articles_by_publisher_publisher_get**
-> NewsResponseList v1_news_articles_by_publisher_publisher_get(publisher)
-
-
+# **Get Articles By Publisher**
 
 Get News Financial News by publisher
 
@@ -202,35 +199,36 @@ Get News Financial News by publisher
 
 ```python
 from __future__ import print_function
-import time
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = IntelligentStockMarketAPI.Configuration(
-    host = "https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api",
+    api_key = "API Key"
 )
 
 
 # Enter a context with an instance of the API client
-with IntelligentStockMarketAPI.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
-    publisher = 'publisher_example' # str | 
+    publisher = 'new york times' # str | 
 
     try:
         api_response = api_instance.v1_news_articles_by_publisher_publisher_get(publisher)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FinancialNewsApi->v1_news_articles_by_publisher_publisher_get: %s\n" % e)
+        print("Exception when calling Financial News Api {}".format(e))
+
 ```
 
 ### Parameters
 
-| Name          | Type    | Description | Notes |
-|---------------|---------|-------------|-------|
-| **publisher** | **str** |             |       |
+| Name          | Type    | Description           | Notes |
+|---------------|---------|-----------------------|-------|
+| **publisher** | **str** | **Name of Publisher** |       |
 
 ### Return type
 
@@ -238,78 +236,75 @@ with IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Authorization
 
-No authorization required
+api key - obtainable from our website - subscribe here https://eod-stock-api.site/login
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_news_articles_by_ticker_stock_code_get**
-> NewsResponseList v1_news_articles_by_ticker_stock_code_get(stock_code)
+## **Return News Articles By Stock Code / Ticker Symbol**
 
-
-
-Get Financial News Articles By Ticker
+Get Financial News Articles By Ticker Symbol / Stock Code
 
 ### Example
 
 ```python
 from __future__ import print_function
-import time
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = IntelligentStockMarketAPI.Configuration(
-    host = "https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api",
+    api_key = "API Key"
 )
 
 
 # Enter a context with an instance of the API client
-with IntelligentStockMarketAPI.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
-    stock_code = 'stock_code_example' # str | 
+    stock_code = 'TSLA' # str | Tesla Stock Code 
 
     try:
         api_response = api_instance.v1_news_articles_by_ticker_stock_code_get(stock_code)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FinancialNewsApi->v1_news_articles_by_ticker_stock_code_get: %s\n" % e)
+        print("Exception when calling Financial News Api {}".format(e))
+
 ```
 
 ### Parameters
 
-| Name           | Type    | Description | Notes |
-|----------------|---------|-------------|-------|
-| **stock_code** | **str** |             |       |
+| Name           | Type    | Description   | Notes |
+|----------------|---------|---------------|-------|
+| **stock_code** | **str** | Ticker Symbol |       |
 
 ### Return type
 
 [**NewsResponseList**](NewsResponseList.md)
 
 ### Authorization
-
-No authorization required
+api key - obtainable from our website - subscribe here https://eod-stock-api.site/login
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **0**       |             | -                |
+|------------|-------------|------------------|
+| **200**    |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
