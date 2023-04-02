@@ -15,11 +15,12 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import src.IntelligentStockMarketAPI
-from src.IntelligentStockMarketAPI.models.annual_balance_sheet_response import AnnualBalanceSheetResponse  # noqa: E501
-from src.IntelligentStockMarketAPI.rest import ApiException
+import IntelligentStockMarketAPI
+from IntelligentStockMarketAPI.models.annual_balance_sheet_response import AnnualBalanceSheetResponse  # noqa: E501
+from IntelligentStockMarketAPI.rest import ApiException
 
 
+# noinspection PyMethodMayBeStatic
 class TestAnnualBalanceSheetResponse(unittest.TestCase):
     """AnnualBalanceSheetResponse unit test stubs"""
 
@@ -38,8 +39,8 @@ class TestAnnualBalanceSheetResponse(unittest.TestCase):
         if include_optional:
             return AnnualBalanceSheetResponse(
                 message='0',
-                payload=src.IntelligentStockMarketAPI.models.annual_balance_sheet.AnnualBalanceSheet(
-                    balance_sheet=src.IntelligentStockMarketAPI.models._balance_sheet._BalanceSheet(
+                payload= IntelligentStockMarketAPI.models.AnnualBalanceSheet(
+                    balance_sheet= IntelligentStockMarketAPI.models.BalanceSheet(
                         accounts_payable=1.337,
                         accumulated_amortization=1.337,
                         accumulated_depreciation=1.337,
@@ -101,8 +102,7 @@ class TestAnnualBalanceSheetResponse(unittest.TestCase):
                 status=True
             )
         else:
-            return AnnualBalanceSheetResponse(
-            )
+            return AnnualBalanceSheetResponse()
 
     def testAnnualBalanceSheetResponse(self):
         """Test AnnualBalanceSheetResponse"""
