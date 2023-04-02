@@ -2,8 +2,10 @@
 
 <h2>Intelligent EOD Stocks API</h2>
     <p>
-    End of day stock world wide STOCK API, this api is intended for use by web application developers, 
-    and service providers looking for up-to-date always available.
+        Intelligent Stock Market API provides end-of-day stock data worldwide, financial news, and financial social
+        media trends for web application developers, researchers and service providers.
+        The API covers over 150,000 tickers, stocks, mutual funds, and more from around the world.
+        It offers information for any period, including daily, weekly.
     <ul>
         <li>Exchange Information</li>
         <li>Stock Tickers Data</li>
