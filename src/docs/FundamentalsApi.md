@@ -645,14 +645,12 @@ api_key
 
 ### HTTP response details
 | Status code | Description | Response headers |
-|------------|-------------|------------------|
-| **200**    |             | -                |
+|-------------|-------------|------------------|
+| **200**     |             |                  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_exchange_outstanding_shares_exchange_code_exchange_code_year_get**
-> OptionsResponse v1_fundamentals_exchange_outstanding_shares_exchange_code_exchange_code_year_get(exchange_code, year)
-
+## **Fundamentals Outstanding Shares BY Exchange & Year**
 
 
 Given an exchange_code and a year return all outstanding shares for all companies for that year
@@ -677,14 +675,15 @@ configuration = IntelligentStockMarketAPI.Configuration(
 with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
-    exchange_code = 'exchange_code_example' # str | 
-    year = 'year_example' # str | 
+    exchange_code = 'TO' # str | 
+    year = '2023' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_exchange_outstanding_shares_exchange_code_exchange_code_year_get(exchange_code, year)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_exchange_outstanding_shares_exchange_code_exchange_code_year_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
@@ -710,14 +709,11 @@ api_key
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get**
-> OptionsResponse v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get(stock_code, to, _from, term)
-
-
+## **Financial Statements Given a Range of Dates**
 
 Return Annual or Quarterly Statements based on Term, Stock Code, and dates _from and _to
 
@@ -742,15 +738,16 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
-    to = 'to_example' # str | 
-    _from = '_from_example' # str | 
-    term = 'term_example' # str | 
+    _to = '2022-12-31' # str | 
+    _from = '2022-01-01' # str | 
+    term = 'quarterly' # str | 
 
     try:
-        api_response = api_instance.v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get(stock_code, to, _from, term)
+        api_response = api_instance.v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get(stock_code, _to, _from, term)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_financial_statements_by_term_from_to_stock_code_term_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
