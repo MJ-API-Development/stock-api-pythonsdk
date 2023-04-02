@@ -56,7 +56,7 @@ class TestPublicFundamental(unittest.TestCase):
                     target_price=1.337, ),
                 balance_sheets=src.IntelligentStockMarketAPI.models.balance_sheets.BalanceSheets(
                     annual_balance_sheets=src.IntelligentStockMarketAPI.models.annual_balance_sheet.AnnualBalanceSheet(
-                        balance_sheet=src.IntelligentStockMarketAPI.models._balance_sheet.BalanceSheet(
+                        balance_sheet=src.IntelligentStockMarketAPI.models.BalanceSheet(
                             accounts_payable=1.337,
                             accumulated_amortization=1.337,
                             accumulated_depreciation=1.337,

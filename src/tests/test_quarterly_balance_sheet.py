@@ -20,6 +20,8 @@ import src.IntelligentStockMarketAPI
 from src.IntelligentStockMarketAPI.models.quarterly_balance_sheet import QuarterlyBalanceSheet  # noqa: E501
 from src.IntelligentStockMarketAPI.rest import ApiException
 
+
+# noinspection DuplicatedCode
 class TestQuarterlyBalanceSheet(unittest.TestCase):
     """QuarterlyBalanceSheet unit test stubs"""
 
@@ -37,7 +39,7 @@ class TestQuarterlyBalanceSheet(unittest.TestCase):
         # model = src.IntelligentStockMarketAPI.models.quarterly_balance_sheet.QuarterlyBalanceSheet()  # noqa: E501
         if include_optional :
             return QuarterlyBalanceSheet(
-                balance_sheet = src.IntelligentStockMarketAPI.models._balance_sheet.BalanceSheet(
+                balance_sheet = src.IntelligentStockMarketAPI.models.BalanceSheet(
                     accounts_payable = 1.337, 
                     accumulated_amortization = 1.337, 
                     accumulated_depreciation = 1.337, 

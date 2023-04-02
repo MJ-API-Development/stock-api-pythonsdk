@@ -20,6 +20,7 @@ from src.IntelligentStockMarketAPI.models.quarterly_balance_response import Quar
 from src.IntelligentStockMarketAPI.rest import ApiException
 
 
+# noinspection DuplicatedCode
 class TestQuarterlyBalanceResponse(unittest.TestCase):
     """QuarterlyBalanceResponse unit test stubs"""
 
@@ -38,8 +39,8 @@ class TestQuarterlyBalanceResponse(unittest.TestCase):
         if include_optional:
             return QuarterlyBalanceResponse(
                 message='0',
-                payload=src.IntelligentStockMarketAPI.models.quarterly_balance_sheet.QuarterlyBalanceSheet(
-                    balance_sheet=src.IntelligentStockMarketAPI.models._balance_sheet._BalanceSheet(
+                payload=src.IntelligentStockMarketAPI.models.QuarterlyBalanceSheet(
+                    balance_sheet=src.IntelligentStockMarketAPI.models.BalanceSheet(
                         accounts_payable=1.337,
                         accumulated_amortization=1.337,
                         accumulated_depreciation=1.337,

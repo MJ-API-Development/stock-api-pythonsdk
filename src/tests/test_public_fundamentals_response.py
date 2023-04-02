@@ -20,7 +20,7 @@ from src.IntelligentStockMarketAPI.models.public_fundamentals_response import Pu
 from src.IntelligentStockMarketAPI.rest import ApiException
 
 
-# noinspection PyMethodMayBeStatic
+# noinspection PyMethodMayBeStatic,DuplicatedCode
 class TestPublicFundamentalsResponse(unittest.TestCase):
     """PublicFundamentalsResponse unit test stubs"""
 
@@ -57,8 +57,8 @@ class TestPublicFundamentalsResponse(unittest.TestCase):
                         strong_sell=56,
                         target_price=1.337, ),
                     balance_sheets=src.IntelligentStockMarketAPI.models.balance_sheets.BalanceSheets(
-                        annual_balance_sheets=src.IntelligentStockMarketAPI.models.annual_balance_sheet.AnnualBalanceSheet(
-                            balance_sheet=src.IntelligentStockMarketAPI.models._balance_sheet.BalanceSheet(
+                        annual_balance_sheets=src.IntelligentStockMarketAPI.models.AnnualBalanceSheet(
+                            balance_sheet=src.IntelligentStockMarketAPI.models.BalanceSheet(
                                 accounts_payable=1.337,
                                 accumulated_amortization=1.337,
                                 accumulated_depreciation=1.337,
