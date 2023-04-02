@@ -39,7 +39,7 @@ for each stock code return the fundamental data of the company
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -55,13 +55,14 @@ configuration = IntelligentStockMarketAPI.Configuration(
 with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
-    stock_code = 'stock_code_example' # str | 
+    stock_code = 'aapl' # str | 
 
     try:
         api_response = api_instance.v1_fundamental_company_stock_code_get(stock_code)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamental_company_stock_code_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
@@ -80,13 +81,13 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -100,7 +101,7 @@ return general fundamental data for all companies
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -121,7 +122,8 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
         api_response = api_instance.v1_fundamental_general_get()
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamental_general_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api ".format(e))
+
 ```
 
 ### Parameters
@@ -137,13 +139,13 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -158,7 +160,7 @@ given the filing date & balance_sheet_id return annual balance sheet
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -175,13 +177,14 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
-filing_date = 'filing_date_example' # str | 
+    filing_date = '2022-02-03' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_annual_balance_sheet_filing_date_stock_code_get(stock_code, filing_date)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_annual_balance_sheet_filing_date_stock_code_get: %s\n" % e)
+                print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
@@ -201,7 +204,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -222,7 +225,7 @@ returns company address data
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -243,7 +246,8 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
         api_response = api_instance.v1_fundamentals_company_address_id_fundamental_id_get(fundamental_id)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_company_address_id_fundamental_id_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
@@ -262,7 +266,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -283,7 +287,7 @@ returns company address data
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -305,7 +309,8 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
         api_response = api_instance.v1_fundamentals_company_address_stock_stock_code_get(stock_code)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_company_address_stock_stock_code_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
@@ -324,7 +329,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -334,10 +339,7 @@ api_key
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_company_details_id_fundamental_id_get**
-> GeneralResponse v1_fundamentals_company_details_id_fundamental_id_get(fundamental_id)
-
-
+## **Fundamental Company Details**
 
 returns company details from company fundamental data
 
@@ -345,7 +347,7 @@ returns company details from company fundamental data
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -367,7 +369,8 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
         api_response = api_instance.v1_fundamentals_company_details_id_fundamental_id_get(fundamental_id)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_company_details_id_fundamental_id_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
@@ -386,7 +389,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -396,10 +399,7 @@ api_key
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_company_details_stock_stock_code_get**
-> GeneralResponse v1_fundamentals_company_details_stock_stock_code_get(stock_code)
-
-
+## **Fundamentals Company Details By Stock Code**
 
 returns company details from company fundamental data
 
@@ -407,7 +407,7 @@ returns company details from company fundamental data
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -429,7 +429,8 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
         api_response = api_instance.v1_fundamentals_company_details_stock_stock_code_get(stock_code)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_company_details_stock_stock_code_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
@@ -448,20 +449,17 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_company_insider_transactions_stock_code_stock_code_year_get**
-> OptionsResponse v1_fundamentals_company_insider_transactions_stock_code_stock_code_year_get(stock_code, year)
-
-
+## **Fundamentals Insider Trading By Stock Code and Year**
 
 Given companies stock_code, and year return a list of insider transactions
 
@@ -469,7 +467,7 @@ Given companies stock_code, and year return a list of insider transactions
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -486,13 +484,14 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
-year = 'year_example' # str | 
+    year = '2022' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_company_insider_transactions_stock_code_stock_code_year_get(stock_code, year)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_company_insider_transactions_stock_code_stock_code_year_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api : {}".format(e))
+
 ```
 
 ### Parameters
@@ -512,13 +511,13 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -533,7 +532,7 @@ Get Company Valuations Data for the year
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -550,7 +549,7 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
-year = 'year_example' # str | 
+    year = '2022' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_company_valuations_stock_code_stock_code_year_get(stock_code, year)
@@ -576,7 +575,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -597,7 +596,7 @@ Get Analyst rankings for all companies listed under a specific exchange
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -614,13 +613,14 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     exchange_code = 'exchange_code_example' # str | 
-year = 'year_example' # str | 
+    year = '2023' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_exchange_analyst_rankings_exchange_code_exchange_code_year_get(exchange_code, year)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_exchange_analyst_rankings_exchange_code_exchange_code_year_get: %s\n" % e)
+            print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
@@ -640,13 +640,13 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **0**       |             | -                |
+|------------|-------------|------------------|
+| **200**    |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -661,7 +661,7 @@ Given an exchange_code and a year return all outstanding shares for all companie
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -704,7 +704,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -725,7 +725,7 @@ Return Annual or Quarterly Statements based on Term, Stock Code, and dates _from
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -772,7 +772,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -793,7 +793,7 @@ given an a stock_code and a year return a complete financial statements for the 
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -836,7 +836,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -857,7 +857,7 @@ Given an exchange_code and a year return a complete list of financial statements
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -900,7 +900,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -921,7 +921,7 @@ Returns Income Statements by Filing Date and Company Stock Code
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -964,7 +964,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -985,7 +985,7 @@ Given two dates and a stock date return all financial statements, _from & _to sh
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -1030,7 +1030,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -1051,7 +1051,7 @@ Will return Company Income Statement By Statement ID
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -1092,7 +1092,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -1113,7 +1113,7 @@ get fundamental highlights data from either fundamental_id or stock_codes
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -1154,7 +1154,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -1175,7 +1175,7 @@ get fundamental highlights data from either fundamental_id or stock_codes
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -1216,7 +1216,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -1237,7 +1237,7 @@ given filing_date and balance_sheet_id return Quarterly Balance Sheet
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -1280,7 +1280,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -1301,7 +1301,7 @@ Given a company stock_code and a year return technical indicators for that year
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -1344,7 +1344,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -1365,7 +1365,7 @@ Given an exchange_code and a year return all technical indicators released for c
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
@@ -1408,7 +1408,7 @@ api_key
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
