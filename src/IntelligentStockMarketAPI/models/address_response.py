@@ -14,8 +14,6 @@
 import pprint
 import re  # noqa: F401
 
-import six
-
 from src.IntelligentStockMarketAPI.configuration import Configuration
 
 
