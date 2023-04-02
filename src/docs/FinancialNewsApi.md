@@ -10,10 +10,7 @@ All URIs are relative to *https://gateway.eod-stock-api.site/api*
 | [**v1_news_articles_by_publisher_publisher_get**](FinancialNewsApi.md#v1_news_articles_by_publisher_publisher_get) | **GET** /v1/news/articles-by-publisher/{publisher} |             |
 | [**v1_news_articles_by_ticker_stock_code_get**](FinancialNewsApi.md#v1_news_articles_by_ticker_stock_code_get)     | **GET** /v1/news/articles-by-ticker/{stock_code}   |             |
 
-# **v1_news_article_uuid_get**
-> News v1_news_article_uuid_get(uuid)
-
-
+# **Return News Articles By UUID**
 
 Obtain Financial News Information related to listed companies
 
@@ -21,19 +18,20 @@ Obtain Financial News Information related to listed companies
 
 ```python
 from __future__ import print_function
-import time
+
 import IntelligentStockMarketAPI
 from IntelligentStockMarketAPI.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://gateway.eod-stock-api.site/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = IntelligentStockMarketAPI.Configuration(
-    host = "https://gateway.eod-stock-api.site/api"
+    host = "https://gateway.eod-stock-api.site/api",
+    api_key = "API KEY"
 )
 
 
 # Enter a context with an instance of the API client
-with IntelligentStockMarketAPI.ApiClient() as api_client:
+with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FinancialNewsApi(api_client)
     uuid = 'uuid_example' # str | 
@@ -42,14 +40,14 @@ with IntelligentStockMarketAPI.ApiClient() as api_client:
         api_response = api_instance.v1_news_article_uuid_get(uuid)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FinancialNewsApi->v1_news_article_uuid_get: %s\n" % e)
+        print("Exception {}".format(e))
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
+| Name     | Type    | Description | Notes |
+|----------|---------|-------------|-------|
+| **uuid** | **str** |             |       |
 
 ### Return type
 
@@ -67,9 +65,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **200**     |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_news_articles_bounded_upper_bound_get**
 > NewsResponseList v1_news_articles_bounded_upper_bound_get(upper_bound)
@@ -108,9 +106,9 @@ with IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **upper_bound** | **int**|  | 
+| Name            | Type    | Description | Notes |
+|-----------------|---------|-------------|-------|
+| **upper_bound** | **int** |             |       |
 
 ### Return type
 
@@ -128,9 +126,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_news_articles_by_date_date_get**
 > News v1_news_articles_by_date_date_get(date)
@@ -169,9 +167,9 @@ with IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **date** | **str**|  | 
+| Name     | Type    | Description | Notes |
+|----------|---------|-------------|-------|
+| **date** | **str** |             |       |
 
 ### Return type
 
@@ -189,9 +187,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_news_articles_by_publisher_publisher_get**
 > NewsResponseList v1_news_articles_by_publisher_publisher_get(publisher)
@@ -230,9 +228,9 @@ with IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **publisher** | **str**|  | 
+| Name          | Type    | Description | Notes |
+|---------------|---------|-------------|-------|
+| **publisher** | **str** |             |       |
 
 ### Return type
 
@@ -250,9 +248,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1_news_articles_by_ticker_stock_code_get**
 > NewsResponseList v1_news_articles_by_ticker_stock_code_get(stock_code)
@@ -291,9 +289,9 @@ with IntelligentStockMarketAPI.ApiClient() as api_client:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stock_code** | **str**|  | 
+| Name           | Type    | Description | Notes |
+|----------------|---------|-------------|-------|
+| **stock_code** | **str** |             |       |
 
 ### Return type
 
@@ -311,7 +309,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** |  |  -  |
+| **0**       |             | -                |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
