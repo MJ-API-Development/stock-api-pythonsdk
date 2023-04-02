@@ -775,7 +775,7 @@ api_key
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -838,14 +838,12 @@ api_key
 
 ### HTTP response details
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **0**       |             | -                |
+|------------|-------------|------------------|
+| **200**    |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_financial_statements_exchange_year_exchange_code_year_get**
-> OptionsResponse v1_fundamentals_financial_statements_exchange_year_exchange_code_year_get(exchange_code, year)
-
+## **Fundamental Financial Statements By Year**
 
 
 Given an exchange_code and a year return a complete list of financial statements for all companies in exchange
@@ -877,7 +875,7 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
         api_response = api_instance.v1_fundamentals_financial_statements_exchange_year_exchange_code_year_get(exchange_code, year)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_financial_statements_exchange_year_exchange_code_year_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
 ```
 
 ### Parameters
@@ -903,13 +901,11 @@ api_key
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_financial_statements_filing_date_ticker_filing_date_stock_code_get**
-> OptionsResponse v1_fundamentals_financial_statements_filing_date_ticker_filing_date_stock_code_get(stock_code, filing_date)
-
+## **Fundamentals Income Statements By Filing Date & Stock Code**
 
 
 Returns Income Statements by Filing Date and Company Stock Code
@@ -941,7 +937,8 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
         api_response = api_instance.v1_fundamentals_financial_statements_filing_date_ticker_filing_date_stock_code_get(stock_code, filing_date)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_financial_statements_filing_date_ticker_filing_date_stock_code_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
@@ -971,10 +968,7 @@ api_key
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_financial_statements_ticker_date_range_from_to_stock_code_get**
-> OptionsResponse v1_fundamentals_financial_statements_ticker_date_range_from_to_stock_code_get(stock_code, to, _from)
-
-
+## **Fundamentals - Company Financial Statements Given Date Range**
 
 Given two dates and a stock date return all financial statements, _from & _to should be date-strings
 
@@ -999,14 +993,15 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
     stock_code = 'stock_code_example' # str | 
-    to = 'to_example' # str | 
-    _from = '_from_example' # str | 
+    _to = '2022-12-32' # str | YYYY-MM-DD 
+    _from = '2022-01-01' # str | YYYY-MM-DD 
 
     try:
         api_response = api_instance.v1_fundamentals_financial_statements_ticker_date_range_from_to_stock_code_get(stock_code, to, _from)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_financial_statements_ticker_date_range_from_to_stock_code_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
@@ -1037,10 +1032,7 @@ api_key
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_financials_income_statements_statement_id_get**
-> OptionsResponse v1_fundamentals_financials_income_statements_statement_id_get(statement_id)
-
-
+## **Fundamentals Company Financial Statements By ID**
 
 Will return Company Income Statement By Statement ID
 
@@ -1064,13 +1056,13 @@ configuration = IntelligentStockMarketAPI.Configuration(
 with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
-    statement_id = 'statement_id_example' # str | 
+    statement_id = 'fwpe98394hi8jfu8043' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_financials_income_statements_statement_id_get(statement_id)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_financials_income_statements_statement_id_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
 ```
 
 ### Parameters
@@ -1095,14 +1087,11 @@ api_key
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_highlights_id_fundamental_id_get**
-> HighlightsResponse v1_fundamentals_highlights_id_fundamental_id_get(fundamental_id)
-
-
+## **Fundamentals - Highlights By Fundamental ID**
 
 get fundamental highlights data from either fundamental_id or stock_codes
 
@@ -1126,13 +1115,13 @@ configuration = IntelligentStockMarketAPI.Configuration(
 with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
-    fundamental_id = 'fundamental_id_example' # str | 
+    fundamental_id = '34599fg83u94sdfkpsdof' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_highlights_id_fundamental_id_get(fundamental_id)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_highlights_id_fundamental_id_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
 ```
 
 ### Parameters
@@ -1157,14 +1146,11 @@ api_key
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_highlights_stock_stock_code_get**
-> HighlightsResponse v1_fundamentals_highlights_stock_stock_code_get(stock_code)
-
-
+## **Fundamentals - Highlights By Stock Code / Fundamental ID**
 
 get fundamental highlights data from either fundamental_id or stock_codes
 
@@ -1188,13 +1174,13 @@ configuration = IntelligentStockMarketAPI.Configuration(
 with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
-    stock_code = 'stock_code_example' # str | 
+    stock_code = 'MSFT' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_highlights_stock_stock_code_get(stock_code)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_highlights_stock_stock_code_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
 ```
 
 ### Parameters
@@ -1219,16 +1205,16 @@ api_key
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_quarterly_balance_sheet_filing_date_stock_code_get**
+## **Fundamentals - Quarterly Balance Sheets By Stock & Filing Date**
 > QuarterlyBalanceResponse v1_fundamentals_quarterly_balance_sheet_filing_date_stock_code_get(stock_code, filing_date)
 
 
 
-given filing_date and balance_sheet_id return Quarterly Balance Sheet
+Given the filing date and stock code return Quarterly Balance Sheets
 
 ### Example
 
@@ -1257,7 +1243,7 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
         api_response = api_instance.v1_fundamentals_quarterly_balance_sheet_filing_date_stock_code_get(stock_code, filing_date)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_quarterly_balance_sheet_filing_date_stock_code_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
 ```
 
 ### Parameters
@@ -1283,7 +1269,7 @@ api_key
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
