@@ -1244,6 +1244,7 @@ with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling Fundamentals Api {}".format(e))
+
 ```
 
 ### Parameters
@@ -1273,10 +1274,7 @@ api_key
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_tech_indicators_by_company_stock_code_stock_code_year_get**
-> OptionsResponse v1_fundamentals_tech_indicators_by_company_stock_code_stock_code_year_get(stock_code, year)
-
-
+## **Fundamentals Technical Indicators by Stock Code**
 
 Given a company stock_code and a year return technical indicators for that year
 
@@ -1300,14 +1298,14 @@ configuration = IntelligentStockMarketAPI.Configuration(
 with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
-    stock_code = 'stock_code_example' # str | 
-    year = 'year_example' # str | 
+    stock_code = 'msft' # str | 
+    year = '2022' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_tech_indicators_by_company_stock_code_stock_code_year_get(stock_code, year)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_tech_indicators_by_company_stock_code_stock_code_year_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))        
 ```
 
 ### Parameters
@@ -1333,16 +1331,15 @@ api_key
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0**       |             | -                |
+| **200**     |             | -                |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **v1_fundamentals_tech_indicators_by_exchange_exchange_code_exchange_code_year_get**
-> OptionsResponse v1_fundamentals_tech_indicators_by_exchange_exchange_code_exchange_code_year_get(exchange_code, year)
+## ** Fundamentals - Technical Indicators By Exchange & Year**
 
 
-
-Given an exchange_code and a year return all technical indicators released for companies listed on the exchange for the year mentioned
+Given an exchange_code and a year return all technical indicators released for companies listed on the exchange 
+for the year mentioned
 
 ### Example
 
@@ -1364,14 +1361,14 @@ configuration = IntelligentStockMarketAPI.Configuration(
 with IntelligentStockMarketAPI.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = IntelligentStockMarketAPI.FundamentalsApi(api_client)
-    exchange_code = 'exchange_code_example' # str | 
-    year = 'year_example' # str | 
+    exchange_code = 'to' # str | 
+    year = '2022' # str | 
 
     try:
         api_response = api_instance.v1_fundamentals_tech_indicators_by_exchange_exchange_code_exchange_code_year_get(exchange_code, year)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling FundamentalsApi->v1_fundamentals_tech_indicators_by_exchange_exchange_code_exchange_code_year_get: %s\n" % e)
+        print("Exception when calling Fundamentals Api {}".format(e))
 ```
 
 ### Parameters
