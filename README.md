@@ -20,6 +20,8 @@
         we provide information for any period, including daily, weekly.
     </p>
 
+
+
 - API version: v1
 - Package version: 0.0.3
 
@@ -372,3 +374,8 @@ section above.
     **support@eod-stock-api.site**
 
 
+## Community
+
+- [Slack Channel](https://join.slack.com/t/eod-stock-apisite/shared_invite/zt-1uelcf229-c_6QAgWFNyVfXKZr1hYYoQ)
+- [StackOverflow](https://stackoverflowteams.com/c/eod-stock-market-api)
+- [Quora](https://eodstockmarketapi.quora.com/)
