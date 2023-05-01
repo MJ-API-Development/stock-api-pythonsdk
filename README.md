@@ -1,5 +1,5 @@
 # Intelligent EOD Stock Market API Python SDK
-
+[![PyPI](https://img.shields.io/pypi/v/Intelligent-Stock-Market-API.svg)](https://pypi.python.org/pypi/Intelligent-Stock-Market-API)
 <h2>Intelligent EOD Stocks API</h2>
     <p>
         Intelligent Stock Market API provides end-of-day stock data worldwide, financial news, and financial social
